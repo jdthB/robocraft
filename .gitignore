@@ -1,0 +1,9 @@
+/vendor/
+/web/sites/*/files/
+/web/sites/*/private/
+web/sites/*/settings*.php
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
