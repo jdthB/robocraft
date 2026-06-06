@@ -7,3 +7,5 @@ web/sites/*/settings*.php
 .vscode/
 .DS_Store
 Thumbs.db
+*.sql
+*.sql.gz
