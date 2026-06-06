@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: nl
+uuid: bc7db052-a186-4d58-a65d-e5748b509379
+name: RoboCraft
+mail: noreply@example.com
+slogan: 'Ontdek de wereld van robotica, thuis en in de klas.'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: nl
+mail_notification: null
