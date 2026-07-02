@@ -1,0 +1,15 @@
+uuid: 9ba98da2-c532-4ca7-b976-74b9d142b5cd
+langcode: nl
+status: true
+dependencies: {  }
+name: robot_systeem_tegel
+label: 'Robot Systeem Tegel'
+effects:
+  a6cadf6a-a50a-4d67-b422-9b3d07e74fe9:
+    uuid: a6cadf6a-a50a-4d67-b422-9b3d07e74fe9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 240
+      anchor: center-center

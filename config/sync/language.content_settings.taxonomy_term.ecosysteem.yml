@@ -1,0 +1,11 @@
+uuid: 833fde21-697b-4bdd-8549-decc1c44df73
+langcode: nl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ecosysteem
+id: taxonomy_term.ecosysteem
+target_entity_type_id: taxonomy_term
+target_bundle: ecosysteem
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,9 @@
+uuid: b551eea5-700b-417e-97f1-131be4e98525
+langcode: nl
+status: true
+dependencies: {  }
+name: Doelgroep
+vid: doelgroep
+description: 'Gebruik deze termen om aan te geven voor welke doelgroep een artikel of workshop bedoeld is.'
+weight: 0
+new_revision: false

@@ -1,0 +1,9 @@
+uuid: da49ed51-efcd-40b2-9e52-b598ed867e78
+langcode: nl
+status: true
+dependencies: {  }
+name: 'Type Artikel'
+vid: type_artikel
+description: 'Gebruik dit om het type artikel aan een artikel te koppelen.'
+weight: 0
+new_revision: false

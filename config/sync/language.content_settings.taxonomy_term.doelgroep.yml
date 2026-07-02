@@ -1,0 +1,11 @@
+uuid: 21c5946b-6321-40f4-8a15-cb1ec9bd30f8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.doelgroep
+id: taxonomy_term.doelgroep
+target_entity_type_id: taxonomy_term
+target_bundle: doelgroep
+default_langcode: site_default
+language_alterable: false

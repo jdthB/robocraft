@@ -1,0 +1,23 @@
+uuid: 7abc51d1-bfdb-4420-a485-588fbe4202a3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ecosysteem
+  module:
+    - taxonomy
+id: ecosysteem_termpagina_s
+label: "Robot systemen termpagina's"
+type: 'canonical_entities:taxonomy_term'
+pattern: '/robotsystemen/[term:name]'
+selection_criteria:
+  ded60ecd-2ea1-471d-8b24-80462f53ca0a:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      ecosysteem: ecosysteem
+selection_logic: and
+weight: -5
+relationships: {  }

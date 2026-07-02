@@ -1,0 +1,9 @@
+uuid: d87902e1-bd6d-40ab-baeb-b451b7b60ccd
+langcode: nl
+status: true
+dependencies: {  }
+name: 'Robot Systemen'
+vid: ecosysteem
+description: 'Gebruik dit om inhoud te koppelen aan een specifiek robotica-ecosysteem.'
+weight: 0
+new_revision: false

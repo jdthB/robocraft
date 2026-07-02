@@ -1,0 +1,24 @@
+uuid: e69a3d44-b4ac-4552-b6ab-e3dd3da58b22
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ecosysteem.field_afbeelding_robotsysteem
+    - taxonomy.vocabulary.ecosysteem
+  module:
+    - text
+id: taxonomy_term.ecosysteem.default
+targetEntityType: taxonomy_term
+bundle: ecosysteem
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_afbeelding_robotsysteem: true
+  langcode: true

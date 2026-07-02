@@ -1,0 +1,62 @@
+uuid: 446c592b-fbe3-47db-a8f3-b27bc46b86a8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ecosysteem.field_afbeelding_robotsysteem
+    - image.style.thumbnail
+    - taxonomy.vocabulary.ecosysteem
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.ecosysteem.default
+targetEntityType: taxonomy_term
+bundle: ecosysteem
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_afbeelding_robotsysteem:
+    type: image_image
+    weight: 101
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

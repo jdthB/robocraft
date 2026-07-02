@@ -1,0 +1,11 @@
+uuid: de66ecca-e0c1-42d8-8ee1-048e6d3a79b8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.type_artikel
+id: taxonomy_term.type_artikel
+target_entity_type_id: taxonomy_term
+target_bundle: type_artikel
+default_langcode: site_default
+language_alterable: false
