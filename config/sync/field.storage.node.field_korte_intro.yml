@@ -1,0 +1,19 @@
+uuid: 60ebefc3-dbe6-4a83-933b-0436f548ab91
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_korte_intro
+field_name: field_korte_intro
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

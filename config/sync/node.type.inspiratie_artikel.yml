@@ -1,0 +1,17 @@
+uuid: 27390002-fac8-47f8-be85-a75afd41ac4d
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Inspiratie Artikel'
+type: inspiratie_artikel
+description: 'Artikel voor de inspiratie- en kennissectie van RoboCraft'
+help: 'Voeg hier een artikel toe voor de kennis- en inspiratiebank van RoboCraft.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

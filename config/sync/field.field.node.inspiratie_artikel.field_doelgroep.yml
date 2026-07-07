@@ -1,0 +1,29 @@
+uuid: 7ef735ca-8a17-4c13-836b-43cfbdd6b86e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doelgroep
+    - node.type.inspiratie_artikel
+    - taxonomy.vocabulary.doelgroep
+id: node.inspiratie_artikel.field_doelgroep
+field_name: field_doelgroep
+entity_type: node
+bundle: inspiratie_artikel
+label: Doelgroep
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      doelgroep: doelgroep
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

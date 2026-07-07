@@ -14,7 +14,7 @@ dependencies:
 id: robot_systemen
 label: 'Robot systemen'
 module: views
-description: ''
+description: 'Overzicht aangeboden robot systemen'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -210,11 +210,16 @@ display:
         options:
           grouping: {  }
           columns: 3
-          cell_min_width: 100
+          cell_min_width: 240
           grid_gutter: 25
           alignment: horizontal
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:

@@ -1,0 +1,19 @@
+uuid: 22eba4b9-bd39-4cc5-b837-839ef3e6015d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_korte_intro
+    - node.type.inspiratie_artikel
+id: node.inspiratie_artikel.field_korte_intro
+field_name: field_korte_intro
+entity_type: node
+bundle: inspiratie_artikel
+label: 'Korte Intro'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,24 @@
+uuid: bb581c9f-9e82-473c-8971-0125a261f453
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inhoud
+    - filter.format.basic_html
+    - node.type.inspiratie_artikel
+  module:
+    - text
+id: node.inspiratie_artikel.field_inhoud
+field_name: field_inhoud
+entity_type: node
+bundle: inspiratie_artikel
+label: Inhoud
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

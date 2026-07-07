@@ -1,0 +1,23 @@
+uuid: 40ae76b9-6769-47e3-a901-87ced72c6ef2
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_uitgelicht_op_inspiratie
+    - node.type.inspiratie_artikel
+id: node.inspiratie_artikel.field_uitgelicht_op_inspiratie
+field_name: field_uitgelicht_op_inspiratie
+entity_type: node
+bundle: inspiratie_artikel
+label: 'Uitgelicht op inspiratie'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Aan
+  off_label: Uit
+field_type: boolean

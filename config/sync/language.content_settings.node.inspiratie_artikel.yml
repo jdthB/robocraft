@@ -1,0 +1,11 @@
+uuid: 2553174b-6f55-4bd0-a6cd-341729d18877
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.inspiratie_artikel
+id: node.inspiratie_artikel
+target_entity_type_id: node
+target_bundle: inspiratie_artikel
+default_langcode: site_default
+language_alterable: false

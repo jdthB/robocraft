@@ -1,0 +1,58 @@
+uuid: e4da79c6-c171-43c9-87c5-4f1aa522128d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.inspiratie_artikel.field_doelgroep
+    - field.field.node.inspiratie_artikel.field_inhoud
+    - field.field.node.inspiratie_artikel.field_inspiratie_afbeelding
+    - field.field.node.inspiratie_artikel.field_korte_intro
+    - field.field.node.inspiratie_artikel.field_robot_systeem
+    - field.field.node.inspiratie_artikel.field_type_artikel
+    - field.field.node.inspiratie_artikel.field_uitgelicht_op_inspiratie
+    - node.type.inspiratie_artikel
+  module:
+    - image
+    - text
+    - user
+id: node.inspiratie_artikel.default
+targetEntityType: node
+bundle: inspiratie_artikel
+mode: default
+content:
+  field_inhoud:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_inspiratie_afbeelding:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_korte_intro:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_doelgroep: true
+  field_robot_systeem: true
+  field_type_artikel: true
+  field_uitgelicht_op_inspiratie: true
+  langcode: true

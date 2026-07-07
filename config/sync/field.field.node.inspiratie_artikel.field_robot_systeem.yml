@@ -1,0 +1,29 @@
+uuid: 560c4dbe-57a0-4906-93d3-e1e5c3c7ede0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_robot_systeem
+    - node.type.inspiratie_artikel
+    - taxonomy.vocabulary.ecosysteem
+id: node.inspiratie_artikel.field_robot_systeem
+field_name: field_robot_systeem
+entity_type: node
+bundle: inspiratie_artikel
+label: 'Robot Systeem'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ecosysteem: ecosysteem
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

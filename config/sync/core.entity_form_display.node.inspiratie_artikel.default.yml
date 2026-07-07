@@ -1,0 +1,119 @@
+uuid: 88b67846-e6cf-4178-b849-9b5b2c00e301
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.inspiratie_artikel.field_doelgroep
+    - field.field.node.inspiratie_artikel.field_inhoud
+    - field.field.node.inspiratie_artikel.field_inspiratie_afbeelding
+    - field.field.node.inspiratie_artikel.field_korte_intro
+    - field.field.node.inspiratie_artikel.field_robot_systeem
+    - field.field.node.inspiratie_artikel.field_type_artikel
+    - field.field.node.inspiratie_artikel.field_uitgelicht_op_inspiratie
+    - image.style.thumbnail
+    - node.type.inspiratie_artikel
+  module:
+    - image
+    - path
+    - text
+id: node.inspiratie_artikel.default
+targetEntityType: node
+bundle: inspiratie_artikel
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_doelgroep:
+    type: options_buttons
+    weight: 125
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_inhoud:
+    type: text_textarea
+    weight: 123
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_inspiratie_afbeelding:
+    type: image_image
+    weight: 121
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_korte_intro:
+    type: string_textarea
+    weight: 122
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_robot_systeem:
+    type: options_buttons
+    weight: 126
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_type_artikel:
+    type: options_buttons
+    weight: 124
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_uitgelicht_op_inspiratie:
+    type: boolean_checkbox
+    weight: 127
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true
