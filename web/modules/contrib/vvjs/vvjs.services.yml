@@ -1,0 +1,20 @@
+services:
+  Drupal\vvjs\Hook\VvjsHelpHook:
+    arguments:
+      - '@extension.list.module'
+      - '@module_handler'
+      - '@plugin.manager.filter'
+      - '@config.factory'
+
+  Drupal\vvjs\Hook\VvjsThemeHook:
+    autowire: true
+
+  Drupal\vvjs\Hook\VvjsPreprocessHooks:
+    autowire: true
+
+  # `@?` makes the dependency nullable so the container compiles even
+  # when vvj_core hasn't been enabled yet (the v1 → v2 upgrade window
+  # before vvjs_update_10001 runs).
+  Drupal\vvjs\Hook\VvjsTokenHooks:
+    arguments:
+      - '@?vvj_core.token_resolver'

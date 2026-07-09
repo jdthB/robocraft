@@ -1,0 +1,16 @@
+includes:
+  - phpstan-baseline.neon
+
+parameters:
+  level: max
+  scanDirectories:
+    - ../vvj_core/src
+    - ../vvj_core/tests/src
+  paths:
+    - src
+    - tests
+    - vvjs.module
+    - vvjs.install
+  excludePaths:
+    - vendor (?)
+  treatPhpDocTypesAsCertain: false

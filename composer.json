@@ -24,6 +24,7 @@
         "drupal/core-recommended": "^11.3",
         "drupal/masquerade": "^2.2",
         "drupal/pathauto": "^1.15",
+        "drupal/vvjs": "^2.0",
         "drush/drush": "^13.7"
     },
     "conflict": {

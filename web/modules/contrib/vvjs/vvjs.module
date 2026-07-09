@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * @file
+ * VVJS — Views Vanilla Javascript Slideshow bootstrap.
+ *
+ * Hooks live as OOP `#[Hook]` attribute classes under `src/Hook/`.
+ *
+ * @license SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+declare(strict_types=1);

@@ -1,0 +1,19 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Parameter &\$variables by\-ref type of method Drupal\\vvjs\\Hook\\VvjsPreprocessHooks\:\:preprocessViewsViewVvjs\(\) expects array\<string, mixed\>, array given\.$#'
+			identifier: parameterByRef.type
+			count: 1
+			path: src/Hook/VvjsPreprocessHooks.php
+
+		-
+			message: '#^Parameter &\$variables by\-ref type of method Drupal\\vvjs\\Hook\\VvjsPreprocessHooks\:\:preprocessViewsViewVvjsFields\(\) expects array\<string, mixed\>, array given\.$#'
+			identifier: parameterByRef.type
+			count: 1
+			path: src/Hook/VvjsPreprocessHooks.php
+
+		-
+			message: '#^Method Drupal\\vvjs\\Hook\\VvjsTokenHooks\:\:tokens\(\) should return array\<string, Drupal\\Core\\Render\\Markup\|string\> but returns array\<string, Drupal\\Component\\Render\\MarkupInterface\|string\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Hook/VvjsTokenHooks.php
