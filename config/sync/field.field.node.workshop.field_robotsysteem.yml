@@ -1,0 +1,29 @@
+uuid: 1e46986f-97c9-44d8-9869-7e5635f002f1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_robotsysteem
+    - node.type.workshop
+    - taxonomy.vocabulary.ecosysteem
+id: node.workshop.field_robotsysteem
+field_name: field_robotsysteem
+entity_type: node
+bundle: workshop
+label: 'Robot Systeem'
+description: 'Robot systeem waarmee tijdens deze workshop wordt gewerkt. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ecosysteem: ecosysteem
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

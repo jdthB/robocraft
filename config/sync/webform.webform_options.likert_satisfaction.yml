@@ -1,0 +1,14 @@
+uuid: 71e938e6-43a1-4bbc-b9fa-f69df8609ac0
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: AKE2SNwCpl6Mu_cmbq9ZM2_cXxCikCVj1vcPE9oHWTs
+id: likert_satisfaction
+label: 'Likertschaal: Tevredenheid'
+category: Likertschaal
+likert: true
+options: "1: Zeer ontevreden\r\n2: Ontevreden\r\n3: Neutraal\r\n4: Tevreden\r\n5: Zeer tevreden\n"

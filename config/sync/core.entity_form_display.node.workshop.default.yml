@@ -1,0 +1,104 @@
+uuid: a974783d-4df5-488d-83f3-e1b182967dc1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.workshop.field_afbeelding
+    - field.field.node.workshop.field_duur
+    - field.field.node.workshop.field_korte_intro_workshop
+    - field.field.node.workshop.field_leeftijd
+    - field.field.node.workshop.field_max_aantal_deelnemers
+    - field.field.node.workshop.field_prijs
+    - field.field.node.workshop.field_robotsysteem
+    - field.field.node.workshop.field_volledige_omschrijving_wor
+    - image.style.thumbnail
+    - node.type.workshop
+  module:
+    - image
+    - text
+id: node.workshop.default
+targetEntityType: node
+bundle: workshop
+mode: default
+content:
+  field_afbeelding:
+    type: image_image
+    weight: 8
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_duur:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_korte_intro_workshop:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_leeftijd:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_max_aantal_deelnemers:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_prijs:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_robotsysteem:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_volledige_omschrijving_wor:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

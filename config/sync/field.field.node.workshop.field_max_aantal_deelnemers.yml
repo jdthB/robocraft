@@ -1,0 +1,23 @@
+uuid: e3ef59e3-bbf3-41c7-a794-43fe21ed215e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_max_aantal_deelnemers
+    - node.type.workshop
+id: node.workshop.field_max_aantal_deelnemers
+field_name: field_max_aantal_deelnemers
+entity_type: node
+bundle: workshop
+label: 'Max. aantal deelnemers'
+description: 'Het maximaal aantal deelnemers die tegelijk aan deze workshop kunnen deelnemen. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 5
+  max: 35
+  prefix: ''
+  suffix: ' deelnemer| deelnemers'
+field_type: integer

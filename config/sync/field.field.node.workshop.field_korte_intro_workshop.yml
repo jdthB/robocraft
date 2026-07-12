@@ -1,0 +1,19 @@
+uuid: 7b5bf4fb-87ef-456c-af2e-2e9e305db52e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_korte_intro_workshop
+    - node.type.workshop
+id: node.workshop.field_korte_intro_workshop
+field_name: field_korte_intro_workshop
+entity_type: node
+bundle: workshop
+label: 'Korte intro'
+description: 'Korte samenvatting voor gebruik in het workshopoverzicht.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 983c03f6-e8e4-4ed0-ae20-add9cc9bbfef
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leeftijd
+    - node.type.workshop
+    - taxonomy.vocabulary.leeftijd
+id: node.workshop.field_leeftijd
+field_name: field_leeftijd
+entity_type: node
+bundle: workshop
+label: Leeftijd
+description: 'Selecteer de leeftijdscategorieën waarvoor deze workshop geschikt is.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      leeftijd: leeftijd
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

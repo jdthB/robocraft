@@ -1,0 +1,9 @@
+uuid: 8e5d93a1-b20a-40c7-8d47-4c516896411b
+langcode: nl
+status: true
+dependencies: {  }
+name: Leeftijd
+vid: leeftijd
+description: 'De leeftijdrange waarvoor een shopitem of workshop geschikt is'
+weight: 0
+new_revision: false

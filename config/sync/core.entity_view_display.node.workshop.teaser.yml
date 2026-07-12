@@ -1,0 +1,72 @@
+uuid: 7a658dd3-8fab-446c-8fa7-e803bb9565bb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.workshop.field_afbeelding
+    - field.field.node.workshop.field_duur
+    - field.field.node.workshop.field_korte_intro_workshop
+    - field.field.node.workshop.field_leeftijd
+    - field.field.node.workshop.field_max_aantal_deelnemers
+    - field.field.node.workshop.field_prijs
+    - field.field.node.workshop.field_robotsysteem
+    - field.field.node.workshop.field_volledige_omschrijving_wor
+    - image.style.workshop_tegel
+    - node.type.workshop
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.workshop.teaser
+targetEntityType: node
+bundle: workshop
+mode: teaser
+content:
+  field_afbeelding:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: workshop_tegel
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_korte_intro_workshop:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_leeftijd:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_robotsysteem:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_duur: true
+  field_max_aantal_deelnemers: true
+  field_prijs: true
+  field_volledige_omschrijving_wor: true
+  langcode: true
+  links: true

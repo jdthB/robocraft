@@ -1,0 +1,24 @@
+uuid: b7887779-836d-4612-8b4b-430f5929555b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_volledige_omschrijving_wor
+    - filter.format.basic_html
+    - node.type.workshop
+  module:
+    - text
+id: node.workshop.field_volledige_omschrijving_wor
+field_name: field_volledige_omschrijving_wor
+entity_type: node
+bundle: workshop
+label: 'Volledige omschrijving'
+description: 'Uitgebreide beschrijving van de workshop, leerdoelen en praktische uitleg.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

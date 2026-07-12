@@ -1,0 +1,13 @@
+uuid: 68244b56-9c63-4fc2-9ddd-d8ada404aee6
+langcode: nl
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: AK83C-dOZEPruvi6GbkuhihWLnO4VtrbesqSC6izf4o
+id: webform_open_action
+label: 'Formulier openen'
+type: webform
+plugin: webform_open_action
+configuration: {  }

@@ -1,0 +1,89 @@
+uuid: f6d52d32-f970-4837-bdb8-d5589962914d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.workshop.field_afbeelding
+    - field.field.node.workshop.field_duur
+    - field.field.node.workshop.field_korte_intro_workshop
+    - field.field.node.workshop.field_leeftijd
+    - field.field.node.workshop.field_max_aantal_deelnemers
+    - field.field.node.workshop.field_prijs
+    - field.field.node.workshop.field_robotsysteem
+    - field.field.node.workshop.field_volledige_omschrijving_wor
+    - image.style.workshop_tegel
+    - node.type.workshop
+  module:
+    - image
+    - text
+    - user
+id: node.workshop.default
+targetEntityType: node
+bundle: workshop
+mode: default
+content:
+  field_afbeelding:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: workshop_tegel
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_duur:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_leeftijd:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_max_aantal_deelnemers:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_prijs:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_robotsysteem:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_volledige_omschrijving_wor:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_korte_intro_workshop: true
+  langcode: true
+  links: true

@@ -1,0 +1,20 @@
+uuid: e813fb31-947e-4df4-afce-fdd59356ca5f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_robotsysteem
+field_name: field_robotsysteem
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

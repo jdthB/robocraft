@@ -1,0 +1,11 @@
+uuid: 7519a73a-4cdc-4c32-b613-3fd5b5e2162c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.leeftijd
+id: taxonomy_term.leeftijd
+target_entity_type_id: taxonomy_term
+target_bundle: leeftijd
+default_langcode: site_default
+language_alterable: false

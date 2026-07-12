@@ -1,0 +1,15 @@
+uuid: aaf57e7c-ef28-49e8-93c3-ded1306e1681
+langcode: nl
+status: true
+dependencies: {  }
+name: workshop_tegel
+label: 'Workshop tegel'
+effects:
+  8b7b4583-2730-4a93-b67a-a58474edb18e:
+    uuid: 8b7b4583-2730-4a93-b67a-a58474edb18e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 420
+      anchor: center-center

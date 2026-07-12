@@ -1,0 +1,14 @@
+uuid: ae88a7e4-1c2f-40eb-8e3b-7ae8b3e976d1
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: zsfFP124dAM-sJkuEfnwaA7DN6o3-IsaXLgdNmObbYg
+id: country_names
+label: Landnamen
+category: Geografisch
+likert: false
+options: ''

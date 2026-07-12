@@ -1,0 +1,38 @@
+uuid: 66801367-e590-453a-9824-340fedcef80d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_afbeelding
+    - node.type.workshop
+  module:
+    - image
+id: node.workshop.field_afbeelding
+field_name: field_afbeelding
+entity_type: node
+bundle: workshop
+label: Afbeelding
+description: 'Upload een afbeelding passend bij de workshop.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

@@ -25,6 +25,7 @@
         "drupal/masquerade": "^2.2",
         "drupal/pathauto": "^1.15",
         "drupal/vvjs": "^2.0",
+        "drupal/webform": "^6.3",
         "drush/drush": "^13.7"
     },
     "conflict": {

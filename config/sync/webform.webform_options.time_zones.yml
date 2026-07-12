@@ -1,0 +1,14 @@
+uuid: 8795c4fa-720f-4841-9159-da9fc5fc2c75
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 8rVcRXLnTAEoWs7zl8du-7RIUnayqUcGYnvb3JT21-o
+id: time_zones
+label: Tijdzones
+category: 'Datum en tijd'
+likert: false
+options: ''

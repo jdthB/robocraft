@@ -1,0 +1,17 @@
+uuid: e69caaf3-e35b-4356-b4a9-9954b30cbc96
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Workshop
+type: workshop
+description: 'Inhoudstype voor workshops van RoboCraft.'
+help: 'Voeg hier de gegevens van de workshop toe.'
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,20 @@
+uuid: 2146715f-9fbd-439a-a690-a2a3c82140ba
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_max_aantal_deelnemers
+field_name: field_max_aantal_deelnemers
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: bd348994-6b34-4050-9267-ce19982fe4f2
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duur
+    - node.type.workshop
+id: node.workshop.field_duur
+field_name: field_duur
+entity_type: node
+bundle: workshop
+label: Duur
+description: 'Gebruik steeds één van deze formats: 60 min, 90 min, 2 uur, Halve dag, Volledige dag.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

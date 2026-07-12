@@ -1,0 +1,13 @@
+uuid: 3c5967c8-b175-4a5a-bf3d-33798dcfbf65
+langcode: nl
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: OmnschvBLb9ZJn0iVyBd2odf8U8Nt0INjRbRMixZw9U
+id: webform_archive_action
+label: 'Formulier archiveren'
+type: webform
+plugin: webform_archive_action
+configuration: {  }
