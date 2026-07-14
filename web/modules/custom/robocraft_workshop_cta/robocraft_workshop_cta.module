@@ -1,0 +1,38 @@
+<?php
+
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function robocraft_workshop_cta_preprocess_node(array &$variables) {
+  if (empty($variables['node']) || !$variables['node'] instanceof NodeInterface) {
+    return;
+  }
+
+  $node = $variables['node'];
+
+  if ($node->bundle() !== 'workshop') {
+    return;
+  }
+
+  if (empty($variables['view_mode']) || $variables['view_mode'] !== 'full') {
+    return;
+  }
+
+  $url = Url::fromUserInput('/workshops/aanvraag', [
+    'query' => [
+      'workshop' => $node->label(),
+    ],
+  ]);
+
+  $link = Link::fromTextAndUrl('Vraag deze workshop aan', $url)->toString();
+
+  $variables['content']['robocraft_workshop_cta'] = [
+    '#type' => 'markup',
+    '#markup' => '<p>' . $link . '</p>',
+    '#weight' => 100,
+  ];
+}

@@ -1,0 +1,7 @@
+name: RoboCraft Workshop CTA
+type: module
+description: Adds a workshop request CTA to workshop detail pages.
+core_version_requirement: ^11
+package: RoboCraft
+dependencies:
+  - node
