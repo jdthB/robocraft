@@ -1,0 +1,13 @@
+uuid: 65953b7c-01c1-4f87-af25-e77443719502
+langcode: nl
+status: true
+dependencies:
+  module:
+    - commerce_order
+_core:
+  default_config_hash: ng8Uf3QSG-ylkOmr0Q3KTBqUh4rf0cswHb5W6Ca7tD4
+id: commerce_order_unlock
+label: 'Unlock order'
+type: commerce_order
+plugin: commerce_order_unlock
+configuration: {  }

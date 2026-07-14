@@ -1,0 +1,16 @@
+uuid: af7ff2a5-1fe0-4794-963a-f8173c817d68
+langcode: nl
+status: true
+dependencies:
+  module:
+    - profile
+  enforced:
+    module:
+      - commerce_order
+_core:
+  default_config_hash: yeGwCxbA5dBAS_3eBkfaVrbxkASEM357dkjPZShKiR4
+id: profile.billing
+label: Facturatie
+description: null
+targetEntityType: profile
+cache: true

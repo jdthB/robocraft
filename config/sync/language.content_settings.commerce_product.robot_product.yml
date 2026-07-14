@@ -1,0 +1,11 @@
+uuid: dfc0c3ef-8a62-4c38-8dc7-485fc5784abc
+langcode: nl
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.robot_product
+id: commerce_product.robot_product
+target_entity_type_id: commerce_product
+target_bundle: robot_product
+default_langcode: site_default
+language_alterable: false

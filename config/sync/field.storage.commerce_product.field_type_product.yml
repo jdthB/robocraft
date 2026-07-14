@@ -1,0 +1,33 @@
+uuid: afb75fd2-575f-4518-903f-cfe42267c30b
+langcode: nl
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_type_product
+field_name: field_type_product
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: basisset_basisset
+      label: Basisset
+    -
+      value: uitbreidingskit_uitbreidingskit
+      label: Uitbreidingskit
+    -
+      value: klasbundel_klasbundel
+      label: Klasbundel
+    -
+      value: accessoire_accessoire
+      label: Accessoire
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

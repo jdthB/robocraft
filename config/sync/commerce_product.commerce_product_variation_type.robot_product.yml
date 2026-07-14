@@ -1,0 +1,10 @@
+uuid: ffb57f9e-c53f-474e-af8d-92b2d881347f
+langcode: nl
+status: true
+dependencies: {  }
+id: robot_product
+label: 'Robot product'
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

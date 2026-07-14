@@ -264,6 +264,7 @@ display:
       menu:
         type: normal
         title: 'Robot Systemen'
+        weight: -48
         menu_name: main
         parent: ''
     cache_metadata:

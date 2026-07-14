@@ -1,0 +1,9 @@
+uuid: ea07ef44-f145-430c-9118-6d1cd78effef
+langcode: nl
+status: true
+dependencies: {  }
+name: Productlijnen
+vid: productlijnen
+description: 'Shop-specifieke productlijnen per robotsysteem'
+weight: 0
+new_revision: false

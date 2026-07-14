@@ -1,0 +1,29 @@
+uuid: 8981cebc-a725-4152-97e2-18f6258fd079
+langcode: nl
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.robot_product
+    - field.storage.commerce_product.field_gebruik
+    - taxonomy.vocabulary.doelgroep
+id: commerce_product.robot_product.field_gebruik
+field_name: field_gebruik
+entity_type: commerce_product
+bundle: robot_product
+label: Gebruik
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      doelgroep: doelgroep
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,38 @@
+uuid: f3d701a2-5c7b-43d7-8faf-d69af5f4d41e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.robot_product
+    - field.storage.commerce_product.field_productafbeelding
+  module:
+    - image
+id: commerce_product.robot_product.field_productafbeelding
+field_name: field_productafbeelding
+entity_type: commerce_product
+bundle: robot_product
+label: Productafbeelding
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

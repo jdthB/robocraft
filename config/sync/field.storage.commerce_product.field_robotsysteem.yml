@@ -1,0 +1,20 @@
+uuid: ae9da8e9-3302-4609-bf07-918dff3a0955
+langcode: nl
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product.field_robotsysteem
+field_name: field_robotsysteem
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

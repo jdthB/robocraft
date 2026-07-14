@@ -1,0 +1,110 @@
+uuid: 0d059ea9-ce13-4dab-9c7e-d17f1ca11644
+langcode: nl
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.robot_product
+    - field.field.commerce_product.robot_product.body
+    - field.field.commerce_product.robot_product.field_gebruik
+    - field.field.commerce_product.robot_product.field_leeftijd
+    - field.field.commerce_product.robot_product.field_productafbeelding
+    - field.field.commerce_product.robot_product.field_productlijn
+    - field.field.commerce_product.robot_product.field_robotsysteem
+    - field.field.commerce_product.robot_product.field_type_product
+    - image.style.thumbnail
+  module:
+    - commerce
+    - commerce_product
+    - image
+    - text
+id: commerce_product.robot_product.default
+targetEntityType: commerce_product
+bundle: robot_product
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 7
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_gebruik:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_leeftijd:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_productafbeelding:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_productlijn:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_robotsysteem:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_type_product:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  stores:
+    type: commerce_entity_select
+    weight: 9
+    region: content
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  variations:
+    type: commerce_product_single_variation
+    weight: 8
+    region: content
+    settings:
+      form_mode: default
+      field_title_text: 'Product information'
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  uid: true

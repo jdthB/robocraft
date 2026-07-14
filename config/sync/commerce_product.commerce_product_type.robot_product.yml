@@ -1,0 +1,13 @@
+uuid: 46ca60cb-da67-4fdc-b656-c6548a460d51
+langcode: nl
+status: true
+dependencies: {  }
+id: robot_product
+label: 'Robot product'
+traits: {  }
+locked: false
+description: 'Alle verkoopbare educatieve robotica-producten van RoboCraft'
+variationTypes:
+  - robot_product
+multipleVariations: false
+injectVariationFields: true

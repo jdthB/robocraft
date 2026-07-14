@@ -1,0 +1,29 @@
+uuid: 8bd3b503-0206-431f-9654-ddb5d280ecde
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_robotsysteem
+    - taxonomy.vocabulary.ecosysteem
+    - taxonomy.vocabulary.productlijnen
+id: taxonomy_term.productlijnen.field_robotsysteem
+field_name: field_robotsysteem
+entity_type: taxonomy_term
+bundle: productlijnen
+label: Robotsysteem
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ecosysteem: ecosysteem
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

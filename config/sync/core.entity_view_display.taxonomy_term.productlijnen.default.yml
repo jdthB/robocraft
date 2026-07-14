@@ -1,0 +1,31 @@
+uuid: 1dd62699-4914-4383-9207-1acd0f008200
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.productlijnen.field_robotsysteem
+    - taxonomy.vocabulary.productlijnen
+  module:
+    - text
+id: taxonomy_term.productlijnen.default
+targetEntityType: taxonomy_term
+bundle: productlijnen
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_robotsysteem:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 7786c50e-125a-49ea-9b2b-d9f669352667
+langcode: nl
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.robot_product
+    - field.storage.commerce_product.field_type_product
+  module:
+    - options
+id: commerce_product.robot_product.field_type_product
+field_name: field_type_product
+entity_type: commerce_product
+bundle: robot_product
+label: 'Type product'
+description: 'Kies het soort product: basisset, klasbundel, accessoire of uitbreidingskit.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
