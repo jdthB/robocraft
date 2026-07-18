@@ -8,6 +8,7 @@ dependencies:
     - image.style.robot_systeem_tegel
     - system.menu.main
     - taxonomy.vocabulary.ecosysteem
+    - taxonomy.vocabulary.leeftijd
   module:
     - better_exposed_filters
     - commerce
@@ -314,12 +315,54 @@ display:
                   field_classes: ''
                 select_all_none: false
                 select_all_none_nested: false
-                display_inline: true
+                display_inline: false
                 soft_limit: 0
                 soft_limit_label_less: 'Minder tonen'
                 soft_limit_label_more: 'Meer tonen'
                 scrollable: false
                 scrollable_height: 300
+              field_leeftijd_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: true
+                  collapsible_disable_automatic_open: false
+                  open_by_default: false
+                  is_secondary: false
+                  hide_label: false
+                  field_classes: ''
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                soft_limit: 0
+                soft_limit_label_less: 'Minder tonen'
+                soft_limit_label_more: 'Meer tonen'
+                scrollable: false
+                scrollable_height: 300
+              price__number:
+                plugin_id: bef_sliders
+                advanced:
+                  collapsible: true
+                  collapsible_disable_automatic_open: false
+                  open_by_default: false
+                  is_secondary: false
+                  hide_label: false
+                  field_classes: ''
+                min: '5'
+                max: '3000'
+                step: '1'
+                animate: '400'
+                animate_ms: '0'
+                orientation: horizontal
+                enable_tooltips: false
+                tooltips_value_prefix: ''
+                tooltips_value_suffix: ''
+                placement_location: start
       access:
         type: none
         options: {  }
@@ -484,6 +527,97 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
+        field_leeftijd_target_id:
+          id: field_leeftijd_target_id
+          table: commerce_product__field_leeftijd
+          field: field_leeftijd_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_leeftijd_target_id_op
+            label: Leeftijd
+            description: ''
+            use_operator: false
+            operator: field_leeftijd_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_leeftijd_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: leeftijd
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        price__number:
+          id: price__number
+          table: commerce_product_variation_field_data
+          field: price__number
+          relationship: reverse__commerce_product_variation__product_id
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product_variation
+          entity_field: price
+          plugin_id: numeric
+          operator: between
+          value:
+            min: '1'
+            max: '3000'
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: price__number_op
+            label: Prijs
+            description: ''
+            use_operator: false
+            operator: price__number_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: price__number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: grid_responsive
         options:
@@ -531,7 +665,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      exposed_block: true
+      exposed_block: false
       display_extenders: {  }
       path: shop-producten
       menu:
