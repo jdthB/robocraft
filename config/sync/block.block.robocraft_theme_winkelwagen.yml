@@ -1,0 +1,22 @@
+uuid: 501894e3-5701-4938-9a64-d9b451c67336
+langcode: nl
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - robocraft_theme
+id: robocraft_theme_winkelwagen
+theme: robocraft_theme
+region: secondary_menu
+weight: -6
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Winkelwagen
+  label_display: visible
+  provider: commerce_cart
+  dropdown: true
+  show_if_empty: true
+visibility: {  }

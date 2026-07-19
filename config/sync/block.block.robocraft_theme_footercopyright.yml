@@ -1,0 +1,23 @@
+uuid: 65a66dcc-0b58-40f6-ac89-ca8415d411da
+langcode: nl
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:33b087c9-f1e6-4da2-83c3-e4b2719e7cbd'
+  module:
+    - block_content
+  theme:
+    - robocraft_theme
+id: robocraft_theme_footercopyright
+theme: robocraft_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:33b087c9-f1e6-4da2-83c3-e4b2719e7cbd'
+settings:
+  id: 'block_content:33b087c9-f1e6-4da2-83c3-e4b2719e7cbd'
+  label: 'Footer copyright'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

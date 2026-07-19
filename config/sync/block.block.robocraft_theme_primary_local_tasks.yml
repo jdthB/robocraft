@@ -1,0 +1,22 @@
+uuid: d93349f0-8248-4ea2-9230-239cbe65e91f
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - robocraft_theme
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: robocraft_theme_primary_local_tasks
+theme: robocraft_theme
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

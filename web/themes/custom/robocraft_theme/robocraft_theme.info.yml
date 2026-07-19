@@ -1,0 +1,17 @@
+name: 'RoboCraft'
+type: theme
+description: 'Custom RoboCraft theme based on Bootstrap Barrio.'
+core_version_requirement: ^11
+base theme: bootstrap_barrio
+package: 'Custom'
+libraries:
+  - robocraft_theme/global-styling
+
+regions:
+  header: Header
+  primary_menu: Primary menu
+  secondary_menu: Secondary menu
+  content: Content
+  sidebar_first: Sidebar first
+  sidebar_second: Sidebar second
+  footer: Footer

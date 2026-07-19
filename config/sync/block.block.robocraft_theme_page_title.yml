@@ -1,0 +1,20 @@
+uuid: db4d7fd5-36c9-4900-9a61-fc90a1b9b105
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - robocraft_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: robocraft_theme_page_title
+theme: robocraft_theme
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Paginatitel
+  label_display: '0'
+  provider: core
+visibility: {  }

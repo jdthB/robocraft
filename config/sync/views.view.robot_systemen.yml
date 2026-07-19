@@ -263,8 +263,11 @@ display:
       path: robot-systemen
       menu:
         type: normal
-        title: 'Robot Systemen'
+        title: Robotsystemen
+        description: ''
         weight: -48
+        enabled: true
+        expanded: false
         menu_name: main
         parent: ''
     cache_metadata:

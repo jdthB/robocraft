@@ -1,0 +1,22 @@
+uuid: 9637840e-6e74-4027-99a2-9cbc0be01e6f
+langcode: nl
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - robocraft_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: robocraft_theme_help
+theme: robocraft_theme
+region: content
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

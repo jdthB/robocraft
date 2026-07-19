@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1f2a44;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #1d2c8f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #41e0cf;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dialog-off-canvas-main-canvas {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-wrapper,
+main,
+.main-content,
+.layout-container {
+  flex: 1 0 auto;
+}
+
+#main-wrapper {
+  padding-top: 4.5rem;
+}
+
+/* CONTENT CARDS */
+main.main-content .views-row,
+main.main-content article,
+main.main-content .node,
+main.main-content .region-content .block {
+  background: #f5f7fb;
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(31, 42, 68, 0.08);
+}
+
+/* TITLES */
+h1,
+h2,
+h3,
+.title {
+  color: #1d2c8f;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1.title,
+h1,
+.page-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: #28357f;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+.title,
+.page-title,
+#block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link {
+  font-family: "Fira Code", monospace;
+}
+
+/* BUTTONS + FORM */
+button,
+.btn,
+input[type="submit"] {
+  background-color: #41e0cf;
+  color: #1d2c8f;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="search"],
+select {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #ccd5e3;
+  border-radius: 8px;
+}
+
+/* HEADER COLORS ONLY */
+#header {
+  background: #ffffff;
+}
+
+#region-secondary-menu,
+.region-secondary-menu,
+#navbar-top {
+  background: transparent;
+}
+
+#navbar-top {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+#block-robocraft-theme-winkelwagen h2 {
+  display: none;
+}
+
+#block-robocraft-theme-winkelwagen .cart-block--summary__icon img {
+  width: 24px;
+  height: 24px;
+}
+
+#block-robocraft-theme-winkelwagen .cart-block--link__expand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #28357f;
+  font-weight: 700;
+}
+
+/* MAIN NAVBAR */
+#navbar-main {
+  background-color: #28357f;
+  position: relative;
+  overflow: visible;
+  height: 112px;
+  margin-top: 3.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 30rem;
+}
+
+/* LOGO LOS VAN DE NAVBAR-FLOW */
+#navbar-main .navbar-brand {
+  position: absolute;
+  left: 7.5rem;
+  top: -6.5rem;
+  transform: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  z-index: 10;
+}
+
+#navbar-main .navbar-brand img {
+  max-height: 320px;
+  width: auto;
+  display: block;
+}
+
+/* COLLAPSE / MENU INHOUD */
+#navbar-main .navbar-collapse {
+  min-height: 112px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start !important;
+  padding-bottom: 1.5rem;
+}
+
+#block-robocraft-theme-main-menu {
+  margin-right: 0;
+}
+
+#block-robocraft-theme-main-menu ul.nav.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 3.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+#block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.50rem;
+}
+
+#block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link:hover,
+#block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link.is-active,
+#block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #58d3c7;
+}
+
+#block-robocraft-theme-main-menu .nav-link--::before,
+#block-robocraft-theme-main-menu .nav-link--::after,
+#block-robocraft-theme-main-menu .nav-link .bi,
+#block-robocraft-theme-main-menu .nav-link .glyphicon,
+#block-robocraft-theme-main-menu .nav-link .fa {
+  display: none !important;
+  content: none !important;
+}
+
+/* SEARCH */
+#block-robocraft-theme-search-form-narrow {
+  margin-left: 2rem;
+}
+
+#block-robocraft-theme-search-form-narrow input[type="search"] {
+  border: 2px solid #58d3c7;
+  border-radius: 0;
+}
+
+#block-robocraft-theme-search-form-narrow input[type="submit"] {
+  background: #58d3c7;
+  color: #1f2a44;
+  border-radius: 6px;
+}
+
+.navbar-brand:focus,
+.nav-link:focus,
+#navbar-main .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* SECONDARY MENU DESKTOP */
+#navbar-top {
+  background: #ffffff;
+  padding: 0.75rem 2rem 0.35rem 2rem;
+}
+
+#navbar-top .region-secondary-menu {
+  position: relative;
+  top: 3.2rem;
+}
+
+#navbar-top .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+#region-secondary-menu,
+.region-secondary-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#navbar-top .region-secondary-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+#block-robocraft-theme-search-form-narrow,
+#block-robocraft-theme-winkelwagen {
+  margin: 0;
+  flex: 0 0 auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+#block-robocraft-theme-search-form-narrow form,
+#block-robocraft-theme-search-form-narrow .search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+#block-robocraft-theme-search-form-narrow .form-search,
+#block-robocraft-theme-search-form-narrow input[type="search"] {
+  display: block;
+  width: 220px;
+  min-width: 220px;
+  height: 38px;
+  background: #ffffff;
+  border: 2px solid #58d3c7;
+  border-radius: 0;
+  margin: 0;
+}
+
+#block-robocraft-theme-search-form-narrow .form-actions,
+#block-robocraft-theme-search-form-narrow input[type="submit"] {
+  margin: 0;
+  height: 38px;
+  flex: 0 0 auto;
+}
+
+#block-robocraft-theme-winkelwagen {
+  justify-content: flex-end;
+}
+
+#block-robocraft-theme-winkelwagen .cart-block--summary__icon img {
+  width: 30px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(33%) saturate(1770%) hue-rotate(210deg) brightness(89%) contrast(96%);
+}
+
+#block-robocraft-theme-winkelwagen .cart-block--link__expand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  color: #28357f;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+
+/* FOOTER */
+body {
+  padding-bottom: 80px;
+}
+
+.site-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #68c1bd;
+  color: #26377c;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.site-footer .container-xxl {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  margin: 0;
+  display: flex;
+}
+
+.site-footer,
+.site-footer * {
+  color: #26377c;
+}
+
+.site-footer a {
+  color: #26377c;
+}
+
+.site-footer a:hover {
+  color: #1d2c8f;
+  text-decoration: underline;
+}
+
+.site-footer .site-footer__top,
+.site-footer .region-footer,
+.site-footer .block,
+.site-footer .content {
+  margin-left: auto;
+  text-align: right;
+}
+
+.site-footer .block,
+.site-footer .content,
+.site-footer .clearfix,
+.site-footer .region-footer,
+.site-footer .container-xxl .block {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  text-align: right;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* MOBILE */
+@media (max-width: 1399px) {
+  #navbar-top {
+    background: #ffffff;
+    padding: 0.5rem 1rem 0.35rem 1rem;
+  }
+
+  #navbar-top .region-secondary-menu {
+    position: static;
+    top: auto;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+
+  #navbar-top .container,
+  #navbar-top .region-secondary-menu,
+  #region-secondary-menu,
+  .region-secondary-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  #block-robocraft-theme-search-form-narrow {
+    display: none !important;
+  }
+
+  #block-robocraft-theme-winkelwagen {
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 0 0 auto;
+  }
+
+  #block-robocraft-theme-winkelwagen .cart-block--summary,
+  #block-robocraft-theme-winkelwagen .cart-block--link__expand {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    color: #28357f;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  #block-robocraft-theme-winkelwagen .cart-block--summary__icon img {
+    width: 26px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(33%) saturate(1770%) hue-rotate(210deg) brightness(89%) contrast(96%);
+  }
+
+  h1.title,
+  h1,
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  #navbar-main {
+    height: auto;
+    min-height: auto;
+    margin-top: 0;
+    padding: 0.75rem 1rem;
+    background-color: #28357f;
+    position: relative;
+    display: block;
+    overflow: visible;
+  }
+
+  #navbar-main .navbar-brand {
+    position: static;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    max-width: 150px;
+    z-index: 1;
+  }
+
+  #navbar-main .navbar-brand img {
+    max-height: 120px;
+    width: auto;
+  }
+
+  #navbar-main .navbar-toggler {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    border: 0;
+    padding: 0.25rem 0.5rem;
+  }
+
+  #navbar-main .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+  }
+
+  #navbar-main .navbar-collapse {
+    min-height: auto;
+    margin-top: 1rem;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+  }
+
+  #navbar-main .navbar-collapse.show,
+  #navbar-main .navbar-collapse.collapsing {
+    background-color: #28357f;
+    padding-top: 0.5rem;
+  }
+
+  #block-robocraft-theme-main-menu ul.nav.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #block-robocraft-theme-main-menu ul.nav.navbar-nav li {
+    width: 100%;
+  }
+
+  #block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.85rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  #block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link:hover,
+  #block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link.is-active,
+  #block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.show {
+    color: #58d3c7;
+  }
+
+  .robocraft-footer {
+    padding: 1rem;
+  }
+}

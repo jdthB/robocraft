@@ -1,0 +1,22 @@
+uuid: ed73c704-f24b-4847-ba6c-ceda3de39b47
+langcode: nl
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - robocraft_theme
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: robocraft_theme_breadcrumbs
+theme: robocraft_theme
+region: content
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

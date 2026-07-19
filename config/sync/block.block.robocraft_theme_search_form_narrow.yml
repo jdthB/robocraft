@@ -1,0 +1,23 @@
+uuid: ddae3e7f-8756-427b-bf73-5e81c6e80e22
+langcode: nl
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - robocraft_theme
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: robocraft_theme_search_form_narrow
+theme: robocraft_theme
+region: secondary_menu
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

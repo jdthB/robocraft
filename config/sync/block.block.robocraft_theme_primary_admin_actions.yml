@@ -1,0 +1,20 @@
+uuid: c5128f92-6d1c-4c2a-8883-4011f7a083bb
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - robocraft_theme
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: robocraft_theme_primary_admin_actions
+theme: robocraft_theme
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primaire beheeracties'
+  label_display: '0'
+  provider: core
+visibility: {  }

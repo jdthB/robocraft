@@ -1,0 +1,15 @@
+{% extends "@bootstrap_barrio/layout/page.html.twig" %}
+
+{% block head %}
+  {{ parent() }}
+{% endblock %}
+
+{% block footer %}
+  {% if page.footer %}
+    <div class="{{ container }}">
+      <div class="site-footer__top clearfix">
+        {{ page.footer }}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

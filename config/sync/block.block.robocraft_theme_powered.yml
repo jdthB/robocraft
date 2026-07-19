@@ -1,0 +1,22 @@
+uuid: 1912e778-bffb-4322-abe2-97231cd94c2f
+langcode: nl
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - robocraft_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: robocraft_theme_powered
+theme: robocraft_theme
+region: footer
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
