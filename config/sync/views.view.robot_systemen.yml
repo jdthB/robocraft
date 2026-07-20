@@ -266,7 +266,7 @@ display:
         title: Robotsystemen
         description: ''
         weight: -48
-        enabled: true
+        enabled: false
         expanded: false
         menu_name: main
         parent: ''

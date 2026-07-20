@@ -749,7 +749,7 @@ body.page-inspiratie .view-inspiratie-hero h3,
 body.page-inspiratie .view-inspiratie-hero .views-field-title h3 {
   font-size: 2rem;
   line-height: 1.2;
-  max-width: 28ch;
+  max-width: 35ch;
 }
 
 
@@ -790,29 +790,42 @@ body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .fiel
 }
 
 
-/* CTA-link als button */
+/* CTA-links als buttons
+   Werkt voor intro naast slider + tekstblokjes naast leerkrachten/ouders */
 body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body a,
-body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body a {
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body a,
+body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body a,
+body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .field--name-body a {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.8rem 1.15rem;
-  background-color: #68c1bd;
-  border: 1px solid #68c1bd;
-  color: #26377c;
+  background-color: #26377c;
+  color: #ffffff;
   border-radius: 8px;
+  font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
   line-height: 1.2;
 }
 
 body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body a:hover,
-body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body a:hover {
-  background-color: #ffffff;
-  border: 1px solid #68c1bd;
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body a:hover,
+body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body a:hover,
+body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .field--name-body a:hover {
+  background-color: #68c1bd;
   color: #26377c;
   text-decoration: none;
 }
 
+/* Titels "Voor leerkrachten" en "Voor ouders" */
+body.page-inspiratie .block-views-blockinspiratie-block-1 > h2,
+body.page-inspiratie .block-views-blockinspiratie-block-2 > h2 {
+  color: #28357f;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
 
 /* Artikeltitels onder leerkrachten / ouders apart */
 body.page-inspiratie .views-view-responsive-grid__item-inner h3.field-content,
@@ -824,12 +837,16 @@ body.page-inspiratie .views-view-responsive-grid__item-inner h3.field-content a 
 }
 
 
-/* Tekstblok naast artikelsecties lager zetten
+/* Tekstblok naast artikelsecties
    Werkt voor beide richtingen: 75-25 en 25-75 */
 body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body,
 body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .field--name-body {
   margin-top: 4.9rem;
   margin-left: 1rem;
+  color: #26377c;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  font-weight: 600;
 }
 
 
