@@ -1,0 +1,15 @@
+uuid: 2cf3e271-eac1-4150-abf8-fd96694e3da5
+langcode: nl
+status: true
+dependencies: {  }
+name: inspiratie_hero_slider
+label: 'Inspiratie Hero Slider'
+effects:
+  113c820a-e088-4e39-a4b3-b42dc6d5b5b9:
+    uuid: 113c820a-e088-4e39-a4b3-b42dc6d5b5b9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 585
+      height: 340
+      anchor: center-center

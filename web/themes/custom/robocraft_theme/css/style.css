@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
+
 /* =================================
    1. BASE
 ================================= */
@@ -37,6 +38,7 @@ img {
   display: block;
 }
 
+
 /* =================================
    2. PAGE LAYOUT
 ================================= */
@@ -65,6 +67,19 @@ img {
     padding-right: 2rem;
   }
 }
+
+/* ---------------------------------
+   2B. Desktop uitlijning voor pagina's zonder sidebar
+   Houdt no-sidebar pagina's mooi in lijn zonder te extreem te verschuiven
+--------------------------------- */
+@media (min-width: 1200px) {
+  body.layout-no-sidebars #main-wrapper .container,
+  body.layout-no-sidebars #main-wrapper .container-xl,
+  body.layout-no-sidebars #main-wrapper .container-xxl {
+    padding-left: 32rem;
+  }
+}
+
 
 /* =================================
    3. SIDEBAR / FILTERS
@@ -135,17 +150,29 @@ main.main-content,
   margin-bottom: 1rem;
 }
 
+
 /* =================================
    4. CONTENT CARDS
 ================================= */
-main.main-content .views-row,
-main.main-content article,
-main.main-content .node {
+
+/* Alleen echte overzichtsitems / losse view-items als kaart stylen,
+   niet volledige articles of nodes */
+main.main-content .views-row {
   background: #f5f7fb;
   border-radius: 16px;
   padding: 1.25rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 14px rgba(31, 42, 68, 0.08);
+}
+
+/* Volledige node- en articleweergaves neutraal houden */
+main.main-content article,
+main.main-content .node {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 0;
+  box-shadow: none;
 }
 
 /* =================================
@@ -192,6 +219,7 @@ h3 {
   font-family: "Fira Code", monospace;
 }
 
+
 /* =================================
    6. BUTTONS + FORMS
 ================================= */
@@ -214,6 +242,7 @@ select {
   border-radius: 8px;
 }
 
+
 /* =================================
    6B. EXPOSED FILTERS / BEF
 ================================= */
@@ -229,8 +258,6 @@ select {
 
 /* ---------------------------------
    6B.2 Buitenrand van elk filterblokje
-   Dit zijn de losse inklapbare vakjes
-   zoals "Robotsysteem", "Leeftijd", ...
 --------------------------------- */
 .views-exposed-form details,
 .bef-exposed-form details {
@@ -243,7 +270,6 @@ select {
 
 /* ---------------------------------
    6B.3 Titelbalk van elk filterblokje
-   Basisopmaak van de summary-regel
 --------------------------------- */
 .views-exposed-form details summary,
 .bef-exposed-form details summary {
@@ -262,7 +288,6 @@ select {
 
 /* ---------------------------------
    6B.4 Native browser-pijltje verbergen
-   We gebruiken hieronder ons eigen pijltje
 --------------------------------- */
 .views-exposed-form details summary::marker,
 .bef-exposed-form details summary::marker {
@@ -276,8 +301,6 @@ select {
 
 /* ---------------------------------
    6B.5 Eigen inklap-pijltje
-   Dicht = naar rechts
-   Open = naar beneden
 --------------------------------- */
 .views-exposed-form details summary::after,
 .bef-exposed-form details summary::after {
@@ -376,11 +399,12 @@ select {
 
 /* ---------------------------------
    6B.13 Dubbele legend/fieldset titel verbergen
-   --------------------------------- */
+--------------------------------- */
 .views-exposed-form fieldset legend,
 .bef-exposed-form fieldset legend {
   display: none;
 }
+
 
 /* =================================
    7. HEADER REGIONS
@@ -399,6 +423,7 @@ select {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
+
 
 /* =================================
    8. CART BLOCK
@@ -419,6 +444,7 @@ select {
   color: #28357f;
   font-weight: 700;
 }
+
 
 /* =================================
    9. MAIN NAVBAR
@@ -500,6 +526,7 @@ select {
   box-shadow: none;
 }
 
+
 /* =================================
    10. SEARCH BLOCK
 ================================= */
@@ -544,6 +571,7 @@ select {
   height: 38px;
   flex: 0 0 auto;
 }
+
 
 /* =================================
    11. SECONDARY MENU DESKTOP
@@ -611,6 +639,7 @@ select {
   line-height: 1;
 }
 
+
 /* =================================
    12. FOOTER
 ================================= */
@@ -672,8 +701,136 @@ select {
   padding: 0;
 }
 
+
 /* =================================
-   13. MOBILE - HARDE OVERGANG
+   13. INSPIRATIEPAGINA
+================================= */
+
+/* Grote kaart rond volledige pagina weg */
+body.page-node-5 main.main-content article.node--type-page,
+body.page-node-5 main.main-content .node.node--type-page {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* Wat lucht tussen layout builder secties */
+body.page-node-5 .node__content > .layout {
+  margin-bottom: 4rem;
+}
+
+body.page-node-5 .node__content > .layout:last-child {
+  margin-bottom: 0;
+}
+
+/* Layout builder kolommen gewoon netjes bovenaan uitlijnen */
+body.page-node-5 .layout--twocol-section--67-33,
+body.page-node-5 .layout--twocol-section--75-25,
+body.page-node-5 .layout--twocol-section--25-75 {
+  align-items: flex-start;
+}
+
+/* Afbeeldingen wat netter */
+body.page-node-5 .vvjs-item-inner img,
+body.page-node-5 .views-view-responsive-grid__item-inner img {
+  border-radius: 16px;
+}
+
+/* Slider-titel minder hard laten afbreken */
+body.page-node-5 .view-inspiratie-hero h3,
+body.page-node-5 .view-inspiratie-hero .views-field-title h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+  max-width: 28ch;
+}
+
+/* Slider-titels apart */
+body.page-node-5 .view-inspiratie-hero h3.field-content,
+body.page-node-5 .view-inspiratie-hero h3.field-content a {
+  color: #e86e0a;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Introblok naast de slider */
+body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body {
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: #26377c;
+  font-weight: 600;
+}
+
+/* Eerste introparagraaf */
+body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:first-child {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+/* Lege paragraaf met &nbsp; niet tonen */
+body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:empty {
+  display: none;
+}
+
+/* CTA-link als button */
+body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.15rem;
+  background-color: #68c1bd;
+  border: 1px solid #68c1bd;
+  color: #26377c;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body a:hover {
+  background-color: #ffffff;
+  border: 1px solid #68c1bd;
+  color: #26377c;
+  text-decoration: none;
+}
+
+/* Artikeltitels onder leerkrachten / ouders apart */
+body.page-node-5 .views-view-responsive-grid__item-inner h3.field-content,
+body.page-node-5 .views-view-responsive-grid__item-inner h3.field-content a {
+  color: #e86e0a;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* Tekstblok naast "Voor leerkrachten" wat lager zetten */
+body.page-node-5 .layout--twocol-section--75-25 .layout__region--second .field--name-body {
+  margin-top: 4.9rem;
+  margin-left: 1rem;
+}
+
+/* Tekstblok naast "Voor ouders" wat lager zetten */
+body.page-node-5 .layout--twocol-section--25-75 .layout__region--first .field--name-body {
+  margin-top: 4.9rem;
+  margin-left: 1rem;
+}
+
+/* Mobiel */
+@media (max-width: 1199.98px) {
+  body.page-node-5 .node__content > .layout {
+    margin-bottom: 2rem;
+  }
+
+  body.page-node-5 .view-inspiratie-hero h3,
+  body.page-node-5 .view-inspiratie-hero .views-field-title h3 {
+    font-size: 1.55rem;
+    max-width: none;
+  }
+}
+
+/* =================================
+   14. MOBILE - HARDE OVERGANG
    Alles onder 1200px gaat meteen naar mobile/hamburger
 ================================= */
 @media (max-width: 1199.98px) {
@@ -877,5 +1034,41 @@ select {
   .robocraft-footer {
     padding: 1rem;
   }
-}
 
+  /* ---------------------------------
+     14.1 Inspiratiepagina op mobiel
+     Alles onder elkaar, luchtiger en leesbaar
+  --------------------------------- */
+  body.page-node-5 .layout--twocol-section--67-33,
+  body.page-node-5 .layout--twocol-section--75-25,
+  body.page-node-5 .layout--twocol-section--25-75 {
+    gap: 1.5rem;
+  }
+
+  body.page-node-5 .view-inspiratie-hero h3,
+  body.page-node-5 .view-inspiratie-hero .views-field-title h3 {
+    font-size: 1.55rem;
+    max-width: none;
+  }
+
+  body.page-node-5 .block-views-blockinspiratie-block-1 > h2,
+  body.page-node-5 .block-views-blockinspiratie-block-2 > h2 {
+    font-size: 1.8rem;
+  }
+
+  body.page-node-5 .views-view-responsive-grid {
+    --views-responsive-grid--column-count: 1 !important;
+    --views-responsive-grid--cell-min-width: 100% !important;
+    --views-responsive-grid--layout-gap: 1.25rem !important;
+  }
+
+  body.page-node-5 .views-view-responsive-grid__item-inner h3 {
+    font-size: 1.15rem;
+  }
+
+  body.page-node-5 .layout--twocol-section--67-33 .field--name-body,
+  body.page-node-5 .layout--twocol-section--75-25 .field--name-body,
+  body.page-node-5 .layout--twocol-section--25-75 .field--name-body {
+    max-width: none;
+  }
+}
