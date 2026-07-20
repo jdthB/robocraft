@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function robocraft_theme_preprocess_html(array &$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node instanceof NodeInterface) {
+    if ($node->bundle() === 'page' && $node->label() === 'Inspiratie') {
+      $variables['attributes']['class'][] = 'page-inspiratie';
+    }
+  }
+}

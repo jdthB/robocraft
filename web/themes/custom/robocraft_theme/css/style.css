@@ -706,9 +706,10 @@ select {
    13. INSPIRATIEPAGINA
 ================================= */
 
+
 /* Grote kaart rond volledige pagina weg */
-body.page-node-5 main.main-content article.node--type-page,
-body.page-node-5 main.main-content .node.node--type-page {
+body.page-inspiratie main.main-content article.node--type-page,
+body.page-inspiratie main.main-content .node.node--type-page {
   background: transparent;
   box-shadow: none;
   border-radius: 0;
@@ -716,66 +717,82 @@ body.page-node-5 main.main-content .node.node--type-page {
   margin-bottom: 0;
 }
 
+
 /* Wat lucht tussen layout builder secties */
-body.page-node-5 .node__content > .layout {
+body.page-inspiratie .node__content > .layout {
   margin-bottom: 4rem;
 }
 
-body.page-node-5 .node__content > .layout:last-child {
+body.page-inspiratie .node__content > .layout:last-child {
   margin-bottom: 0;
 }
 
+
 /* Layout builder kolommen gewoon netjes bovenaan uitlijnen */
-body.page-node-5 .layout--twocol-section--67-33,
-body.page-node-5 .layout--twocol-section--75-25,
-body.page-node-5 .layout--twocol-section--25-75 {
+body.page-inspiratie .layout--twocol-section--67-33,
+body.page-inspiratie .layout--twocol-section--33-67,
+body.page-inspiratie .layout--twocol-section--75-25,
+body.page-inspiratie .layout--twocol-section--25-75 {
   align-items: flex-start;
 }
 
+
 /* Afbeeldingen wat netter */
-body.page-node-5 .vvjs-item-inner img,
-body.page-node-5 .views-view-responsive-grid__item-inner img {
+body.page-inspiratie .vvjs-item-inner img,
+body.page-inspiratie .views-view-responsive-grid__item-inner img {
   border-radius: 16px;
 }
 
+
 /* Slider-titel minder hard laten afbreken */
-body.page-node-5 .view-inspiratie-hero h3,
-body.page-node-5 .view-inspiratie-hero .views-field-title h3 {
+body.page-inspiratie .view-inspiratie-hero h3,
+body.page-inspiratie .view-inspiratie-hero .views-field-title h3 {
   font-size: 2rem;
   line-height: 1.2;
   max-width: 28ch;
 }
 
+
 /* Slider-titels apart */
-body.page-node-5 .view-inspiratie-hero h3.field-content,
-body.page-node-5 .view-inspiratie-hero h3.field-content a {
+body.page-inspiratie .view-inspiratie-hero h3.field-content,
+body.page-inspiratie .view-inspiratie-hero h3.field-content a {
   color: #e86e0a;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.3;
 }
 
-/* Introblok naast de slider */
-body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body {
+
+/* Introblok naast de slider
+   Werkt zowel als de intro rechts staat (67-33)
+   als wanneer die links staat (33-67) */
+body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body,
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body {
   font-size: 1.3rem;
   line-height: 1.75;
   color: #26377c;
   font-weight: 600;
 }
 
+
 /* Eerste introparagraaf */
-body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:first-child {
+body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:first-child,
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body > p:first-child {
   margin-top: 0;
   margin-bottom: 1.25rem;
 }
 
+
 /* Lege paragraaf met &nbsp; niet tonen */
-body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:empty {
+body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:empty,
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body > p:empty {
   display: none;
 }
 
+
 /* CTA-link als button */
-body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body a {
+body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body a,
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body a {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.8rem 1.15rem;
@@ -788,44 +805,50 @@ body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--
   line-height: 1.2;
 }
 
-body.page-node-5 .layout--twocol-section--67-33 .layout__region--second .field--name-body a:hover {
+body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body a:hover,
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body a:hover {
   background-color: #ffffff;
   border: 1px solid #68c1bd;
   color: #26377c;
   text-decoration: none;
 }
 
+
 /* Artikeltitels onder leerkrachten / ouders apart */
-body.page-node-5 .views-view-responsive-grid__item-inner h3.field-content,
-body.page-node-5 .views-view-responsive-grid__item-inner h3.field-content a {
+body.page-inspiratie .views-view-responsive-grid__item-inner h3.field-content,
+body.page-inspiratie .views-view-responsive-grid__item-inner h3.field-content a {
   color: #e86e0a;
   font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.35;
 }
 
-/* Tekstblok naast "Voor leerkrachten" wat lager zetten */
-body.page-node-5 .layout--twocol-section--75-25 .layout__region--second .field--name-body {
+
+/* Tekstblok naast artikelsecties lager zetten
+   Werkt voor beide richtingen: 75-25 en 25-75 */
+body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body,
+body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .field--name-body {
   margin-top: 4.9rem;
   margin-left: 1rem;
 }
 
-/* Tekstblok naast "Voor ouders" wat lager zetten */
-body.page-node-5 .layout--twocol-section--25-75 .layout__region--first .field--name-body {
-  margin-top: 4.9rem;
-  margin-left: 1rem;
-}
 
 /* Mobiel */
 @media (max-width: 1199.98px) {
-  body.page-node-5 .node__content > .layout {
+  body.page-inspiratie .node__content > .layout {
     margin-bottom: 2rem;
   }
 
-  body.page-node-5 .view-inspiratie-hero h3,
-  body.page-node-5 .view-inspiratie-hero .views-field-title h3 {
+  body.page-inspiratie .view-inspiratie-hero h3,
+  body.page-inspiratie .view-inspiratie-hero .views-field-title h3 {
     font-size: 1.55rem;
     max-width: none;
+  }
+
+  body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body,
+  body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .field--name-body {
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
