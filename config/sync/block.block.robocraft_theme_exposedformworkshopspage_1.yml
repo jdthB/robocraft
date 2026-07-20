@@ -1,0 +1,28 @@
+uuid: 585484e9-5adc-4b1d-93e1-4f7b02ae980e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - views.view.workshops
+  module:
+    - system
+    - views
+  theme:
+    - robocraft_theme
+id: robocraft_theme_exposedformworkshopspage_1
+theme: robocraft_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:workshops-page_1'
+settings:
+  id: 'views_exposed_filter_block:workshops-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'Verfijn je keuze'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /workshops

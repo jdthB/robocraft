@@ -388,7 +388,7 @@ display:
               reset_button_always_show: false
             filter:
               field_leeftijd_target_id:
-                plugin_id: default
+                plugin_id: bef
                 advanced:
                   sort_options: false
                   sort_options_method: alphabetical_asc
@@ -398,12 +398,20 @@ display:
                     filter_rewrite_values_key: false
                   collapsible: true
                   collapsible_disable_automatic_open: false
-                  open_by_default: false
+                  open_by_default: true
                   is_secondary: false
                   hide_label: false
                   field_classes: ''
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                soft_limit: 0
+                soft_limit_label_less: 'Minder tonen'
+                soft_limit_label_more: 'Meer tonen'
+                scrollable: false
+                scrollable_height: 300
               field_robotsysteem_target_id:
-                plugin_id: default
+                plugin_id: bef
                 advanced:
                   sort_options: false
                   sort_options_method: alphabetical_asc
@@ -413,10 +421,18 @@ display:
                     filter_rewrite_values_key: false
                   collapsible: true
                   collapsible_disable_automatic_open: false
-                  open_by_default: false
+                  open_by_default: true
                   is_secondary: false
                   hide_label: false
                   field_classes: ''
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                soft_limit: 0
+                soft_limit_label_less: 'Minder tonen'
+                soft_limit_label_more: 'Meer tonen'
+                scrollable: false
+                scrollable_height: 300
       access:
         type: perm
         options:
@@ -558,9 +574,9 @@ display:
         type: grid_responsive
         options:
           grouping: {  }
-          columns: 1
-          cell_min_width: 450
-          grid_gutter: 70
+          columns: 2
+          cell_min_width: 350
+          grid_gutter: 90
           alignment: vertical
       row:
         type: fields
@@ -600,6 +616,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      exposed_block: true
       display_extenders: {  }
       path: workshops
       menu:

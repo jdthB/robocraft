@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
+/* =================================
+   1. BASE
+================================= */
 html,
 body {
   height: 100%;
@@ -10,11 +13,12 @@ body {
   min-height: 100vh;
   background-color: #ffffff;
   color: #1f2a44;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto Flex", Arial, sans-serif;
   line-height: 1.6;
   font-size: 16px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 80px;
 }
 
 a {
@@ -33,28 +37,110 @@ img {
   display: block;
 }
 
+/* =================================
+   2. PAGE LAYOUT
+================================= */
 .dialog-off-canvas-main-canvas {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-#main-wrapper,
-main,
-.main-content,
-.layout-container {
-  flex: 1 0 auto;
-}
-
 #main-wrapper {
-  padding-top: 4.5rem;
+  flex: 1 0 auto;
+  padding-top: 6.5rem;
+  padding-bottom: 8rem;
 }
 
-/* CONTENT CARDS */
+/* Desktop content minder gecentreerd, breder en links uitgelijnd */
+@media (min-width: 992px) {
+  #main-wrapper .container,
+  #main-wrapper .container-xl,
+  #main-wrapper .container-xxl {
+    width: 100%;
+    max-width: 1600px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 10rem;
+    padding-right: 2rem;
+  }
+}
+
+/* =================================
+   3. SIDEBAR / FILTERS
+================================= */
+#sidebar_first > aside.section,
+#sidebar_second > aside.section {
+  padding-top: 4.55rem;
+}
+
+#sidebar_first,
+#sidebar_second {
+  padding-right: 3.5rem;
+}
+
+#sidebar_first .block,
+#sidebar_second .block {
+  max-width: 320px;
+  padding: 1rem;
+  border: none;
+  border-top: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+main.main-content,
+.region-content,
+.view-content {
+  min-width: 0;
+}
+
+/* Shop, workshops en inspiratie filters compact houden */
+#block-robocraft-theme-exposedformshoppage-1,
+#block-robocraft-theme-exposedformshoppage-1 .views-exposed-form,
+#block-robocraft-theme-exposedformshoppage-1 .bef-exposedform,
+#block-robocraft-theme-exposedformshoppage-1 .bef-exposed-form,
+#block-robocraft-theme-exposedformworkshopspage-1,
+#block-robocraft-theme-exposedformworkshopspage-1 .views-exposed-form,
+#block-robocraft-theme-exposedformworkshopspage-1 .bef-exposedform,
+#block-robocraft-theme-exposedformworkshopspage-1 .bef-exposed-form,
+#block-robocraft-theme-exposedforminspiratiepage-1,
+#block-robocraft-theme-exposedforminspiratiepage-1 .views-exposed-form,
+#block-robocraft-theme-exposedforminspiratiepage-1 .bef-exposedform,
+#block-robocraft-theme-exposedforminspiratiepage-1 .bef-exposed-form {
+  width: 100%;
+  max-width: 320px;
+}
+
+#block-robocraft-theme-exposedformshoppage-1 > h2,
+#block-robocraft-theme-exposedformworkshopspage-1 > h2,
+#block-robocraft-theme-exposedforminspiratiepage-1 > h2 {
+  font-size: 1.4rem;
+  color: #28357f;
+  margin-bottom: 0.9rem;
+}
+
+#block-robocraft-theme-exposedformshoppage-1 .views-exposed-form > .d-flex.flex-wrap,
+#block-robocraft-theme-exposedformworkshopspage-1 .views-exposed-form > .d-flex.flex-wrap,
+#block-robocraft-theme-exposedforminspiratiepage-1 .views-exposed-form > .d-flex.flex-wrap {
+  display: block !important;
+}
+
+#block-robocraft-theme-exposedformshoppage-1 details.form-item,
+#block-robocraft-theme-exposedformworkshopspage-1 details.form-item,
+#block-robocraft-theme-exposedforminspiratiepage-1 details.form-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* =================================
+   4. CONTENT CARDS
+================================= */
 main.main-content .views-row,
 main.main-content article,
-main.main-content .node,
-main.main-content .region-content .block {
+main.main-content .node {
   background: #f5f7fb;
   border-radius: 16px;
   padding: 1.25rem;
@@ -62,46 +148,62 @@ main.main-content .region-content .block {
   box-shadow: 0 4px 14px rgba(31, 42, 68, 0.08);
 }
 
-/* TITLES */
-h1,
-h2,
-h3,
-.title {
-  color: #1d2c8f;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-h1.title,
-h1,
-.page-title {
-  font-size: 4rem;
-  line-height: 1.1;
-  color: #28357f;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-weight: 800;
-}
-
+/* =================================
+   5. TYPOGRAPHY
+================================= */
 h1,
 h2,
 h3,
 .title,
-.page-title,
+.page-title {
+  font-family: "Fira Code", monospace;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1,
+h1.title,
+.page-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #28357f;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #28357f;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #e86e0a;
+  margin-bottom: 0.9rem;
+}
+
+.title {
+  color: #1d2c8f;
+}
+
 #block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link {
   font-family: "Fira Code", monospace;
 }
 
-/* BUTTONS + FORM */
+/* =================================
+   6. BUTTONS + FORMS
+================================= */
 button,
 .btn,
 input[type="submit"] {
-  background-color: #41e0cf;
-  color: #1d2c8f;
+  background-color: #68c1bd;
+  color: #26377c;
   border: none;
   border-radius: 8px;
   padding: 0.7rem 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 input[type="text"],
@@ -112,7 +214,177 @@ select {
   border-radius: 8px;
 }
 
-/* HEADER COLORS ONLY */
+/* =================================
+   6B. EXPOSED FILTERS / BEF
+================================= */
+
+/* ---------------------------------
+   6B.1 Algemene filtertekst
+--------------------------------- */
+.views-exposed-form,
+.bef-exposed-form {
+  color: #26377c;
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------
+   6B.2 Buitenrand van elk filterblokje
+   Dit zijn de losse inklapbare vakjes
+   zoals "Robotsysteem", "Leeftijd", ...
+--------------------------------- */
+.views-exposed-form details,
+.bef-exposed-form details {
+  border: 1px solid #68c1bd;
+  border-radius: 12px;
+  background: #ffffff;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* ---------------------------------
+   6B.3 Titelbalk van elk filterblokje
+   Basisopmaak van de summary-regel
+--------------------------------- */
+.views-exposed-form details summary,
+.bef-exposed-form details summary {
+  font-family: "Fira Code", monospace;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e86e0a;
+  background: #eef9f8;
+  padding: 0.9rem 1rem;
+  padding-right: 2.5rem;
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 1px solid rgba(104, 193, 189, 0.35);
+  position: relative;
+}
+
+/* ---------------------------------
+   6B.4 Native browser-pijltje verbergen
+   We gebruiken hieronder ons eigen pijltje
+--------------------------------- */
+.views-exposed-form details summary::marker,
+.bef-exposed-form details summary::marker {
+  content: "";
+}
+
+.views-exposed-form details summary::-webkit-details-marker,
+.bef-exposed-form details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ---------------------------------
+   6B.5 Eigen inklap-pijltje
+   Dicht = naar rechts
+   Open = naar beneden
+--------------------------------- */
+.views-exposed-form details summary::after,
+.bef-exposed-form details summary::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid #26377c;
+  border-bottom: 2px solid #26377c;
+  transform: translateY(-65%) rotate(-45deg);
+  transform-origin: center;
+}
+
+.views-exposed-form details[open] summary::after,
+.bef-exposed-form details[open] summary::after {
+  transform: translateY(-55%) rotate(45deg);
+}
+
+/* ---------------------------------
+   6B.6 Titelbalk wanneer blokje open staat
+--------------------------------- */
+.views-exposed-form details[open] summary,
+.bef-exposed-form details[open] summary {
+  background: #eef9f8;
+}
+
+/* ---------------------------------
+   6B.7 Binnenruimte van opengeklapt filterblokje
+--------------------------------- */
+.views-exposed-form .details-wrapper,
+.bef-exposed-form .details-wrapper {
+  padding: 0.85rem 1rem 1rem;
+}
+
+/* ---------------------------------
+   6B.8 Afstand tussen checkbox-items / filteropties
+--------------------------------- */
+.views-exposed-form .form-check,
+.bef-exposed-form .form-check,
+.views-exposed-form .js-form-item,
+.bef-exposed-form .js-form-item {
+  margin-bottom: 0.55rem !important;
+}
+
+/* ---------------------------------
+   6B.9 Labels van filteropties
+--------------------------------- */
+.views-exposed-form .form-check-label,
+.bef-exposed-form .form-check-label,
+.views-exposed-form label,
+.bef-exposed-form label {
+  color: #26377c;
+  font-size: 1rem;
+}
+
+/* ---------------------------------
+   6B.10 Checkbox-opmaak
+--------------------------------- */
+.views-exposed-form input[type="checkbox"],
+.bef-exposed-form input[type="checkbox"] {
+  transform: scale(1.05);
+  margin-right: 0.4rem;
+}
+
+/* ---------------------------------
+   6B.11 Tekstvelden, zoekvelden en dropdowns
+--------------------------------- */
+.views-exposed-form input[type="text"],
+.bef-exposed-form input[type="text"],
+.views-exposed-form input[type="search"],
+.bef-exposed-form input[type="search"],
+.views-exposed-form select,
+.bef-exposed-form select {
+  width: 100%;
+  font-size: 1rem;
+  color: #26377c;
+  border: 1px solid #68c1bd;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+/* ---------------------------------
+   6B.12 Actieknoppen onderaan filters
+--------------------------------- */
+.views-exposed-form .form-actions,
+.bef-exposed-form .form-actions {
+  margin-top: 1rem;
+}
+
+.views-exposed-form .form-submit,
+.bef-exposed-form .form-submit {
+  width: 100%;
+}
+
+/* ---------------------------------
+   6B.13 Dubbele legend/fieldset titel verbergen
+   --------------------------------- */
+.views-exposed-form fieldset legend,
+.bef-exposed-form fieldset legend {
+  display: none;
+}
+
+/* =================================
+   7. HEADER REGIONS
+================================= */
 #header {
   background: #ffffff;
 }
@@ -128,6 +400,9 @@ select {
   padding-bottom: 0.5rem;
 }
 
+/* =================================
+   8. CART BLOCK
+================================= */
 #block-robocraft-theme-winkelwagen h2 {
   display: none;
 }
@@ -145,7 +420,9 @@ select {
   font-weight: 700;
 }
 
-/* MAIN NAVBAR */
+/* =================================
+   9. MAIN NAVBAR
+================================= */
 #navbar-main {
   background-color: #28357f;
   position: relative;
@@ -157,7 +434,6 @@ select {
   padding-left: 30rem;
 }
 
-/* LOGO LOS VAN DE NAVBAR-FLOW */
 #navbar-main .navbar-brand {
   position: absolute;
   left: 7.5rem;
@@ -175,7 +451,6 @@ select {
   display: block;
 }
 
-/* COLLAPSE / MENU INHOUD */
 #navbar-main .navbar-collapse {
   min-height: 112px;
   display: flex;
@@ -199,7 +474,7 @@ select {
 #block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link {
   color: #ffffff;
   font-weight: 500;
-  font-size: 1.50rem;
+  font-size: 1.4rem;
 }
 
 #block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link:hover,
@@ -219,7 +494,15 @@ select {
   content: none !important;
 }
 
-/* SEARCH */
+.navbar-brand:focus,
+.nav-link:focus,
+#navbar-main .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* =================================
+   10. SEARCH BLOCK
+================================= */
 #block-robocraft-theme-search-form-narrow {
   margin-left: 2rem;
 }
@@ -235,13 +518,36 @@ select {
   border-radius: 6px;
 }
 
-.navbar-brand:focus,
-.nav-link:focus,
-#navbar-main .navbar-toggler:focus {
-  box-shadow: none;
+#block-robocraft-theme-search-form-narrow form,
+#block-robocraft-theme-search-form-narrow .search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
 }
 
-/* SECONDARY MENU DESKTOP */
+#block-robocraft-theme-search-form-narrow .form-search,
+#block-robocraft-theme-search-form-narrow input[type="search"] {
+  display: block;
+  width: 220px;
+  min-width: 220px;
+  height: 38px;
+  background: #ffffff;
+  border: 2px solid #58d3c7;
+  border-radius: 0;
+  margin: 0;
+}
+
+#block-robocraft-theme-search-form-narrow .form-actions,
+#block-robocraft-theme-search-form-narrow input[type="submit"] {
+  margin: 0;
+  height: 38px;
+  flex: 0 0 auto;
+}
+
+/* =================================
+   11. SECONDARY MENU DESKTOP
+================================= */
 #navbar-top {
   background: #ffffff;
   padding: 0.75rem 2rem 0.35rem 2rem;
@@ -284,33 +590,6 @@ select {
   align-items: center;
 }
 
-#block-robocraft-theme-search-form-narrow form,
-#block-robocraft-theme-search-form-narrow .search-form {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0;
-}
-
-#block-robocraft-theme-search-form-narrow .form-search,
-#block-robocraft-theme-search-form-narrow input[type="search"] {
-  display: block;
-  width: 220px;
-  min-width: 220px;
-  height: 38px;
-  background: #ffffff;
-  border: 2px solid #58d3c7;
-  border-radius: 0;
-  margin: 0;
-}
-
-#block-robocraft-theme-search-form-narrow .form-actions,
-#block-robocraft-theme-search-form-narrow input[type="submit"] {
-  margin: 0;
-  height: 38px;
-  flex: 0 0 auto;
-}
-
 #block-robocraft-theme-winkelwagen {
   justify-content: flex-end;
 }
@@ -332,12 +611,9 @@ select {
   line-height: 1;
 }
 
-
-/* FOOTER */
-body {
-  padding-bottom: 80px;
-}
-
+/* =================================
+   12. FOOTER
+================================= */
 .site-footer {
   position: fixed;
   left: 0;
@@ -396,8 +672,58 @@ body {
   padding: 0;
 }
 
-/* MOBILE */
-@media (max-width: 1399px) {
+/* =================================
+   13. MOBILE - HARDE OVERGANG
+   Alles onder 1200px gaat meteen naar mobile/hamburger
+================================= */
+@media (max-width: 1199.98px) {
+  #main-wrapper .container,
+  #main-wrapper .container-xl,
+  #main-wrapper .container-xxl {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #sidebar_first,
+  #sidebar_second,
+  main.main-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  #sidebar_first,
+  #sidebar_second {
+    margin-bottom: 2rem;
+  }
+
+  #sidebar_first > aside.section,
+  #sidebar_second > aside.section {
+    padding-top: 0;
+  }
+
+  #sidebar_first .block,
+  #sidebar_second .block,
+  #block-robocraft-theme-exposedformshoppage-1,
+  #block-robocraft-theme-exposedformshoppage-1 .views-exposed-form,
+  #block-robocraft-theme-exposedformshoppage-1 .bef-exposedform,
+  #block-robocraft-theme-exposedformshoppage-1 .bef-exposed-form,
+  #block-robocraft-theme-exposedformworkshopspage-1,
+  #block-robocraft-theme-exposedformworkshopspage-1 .views-exposed-form,
+  #block-robocraft-theme-exposedformworkshopspage-1 .bef-exposedform,
+  #block-robocraft-theme-exposedformworkshopspage-1 .bef-exposed-form,
+  #block-robocraft-theme-exposedforminspiratiepage-1,
+  #block-robocraft-theme-exposedforminspiratiepage-1 .views-exposed-form,
+  #block-robocraft-theme-exposedforminspiratiepage-1 .bef-exposedform,
+  #block-robocraft-theme-exposedforminspiratiepage-1 .bef-exposed-form {
+    max-width: 100%;
+    width: 100%;
+  }
+
   #navbar-top {
     background: #ffffff;
     padding: 0.5rem 1rem 0.35rem 1rem;
@@ -498,14 +824,22 @@ body {
     min-height: auto;
     margin-top: 1rem;
     padding: 0;
+    background-color: #28357f;
     position: relative;
     z-index: 5;
   }
 
-  #navbar-main .navbar-collapse.show,
-  #navbar-main .navbar-collapse.collapsing {
-    background-color: #28357f;
+  #navbar-main .navbar-collapse.collapse:not(.show) {
+    display: none;
+  }
+
+  #navbar-main .navbar-collapse.show {
+    display: block;
     padding-top: 0.5rem;
+  }
+
+  #navbar-main .navbar-collapse.collapsing {
+    overflow: hidden;
   }
 
   #block-robocraft-theme-main-menu ul.nav.navbar-nav {
@@ -526,7 +860,7 @@ body {
     display: block;
     width: 100%;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     padding: 0.85rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -544,3 +878,4 @@ body {
     padding: 1rem;
   }
 }
+

@@ -345,7 +345,7 @@ display:
                 scrollable: false
                 scrollable_height: 300
               price__number:
-                plugin_id: bef_sliders
+                plugin_id: default
                 advanced:
                   collapsible: true
                   collapsible_disable_automatic_open: false
@@ -353,16 +353,6 @@ display:
                   is_secondary: false
                   hide_label: false
                   field_classes: ''
-                min: '5'
-                max: '3000'
-                step: '1'
-                animate: '400'
-                animate_ms: '0'
-                orientation: horizontal
-                enable_tooltips: false
-                tooltips_value_prefix: ''
-                tooltips_value_suffix: ''
-                placement_location: start
       access:
         type: none
         options: {  }
@@ -623,7 +613,7 @@ display:
         options:
           grouping: {  }
           columns: 3
-          cell_min_width: 100
+          cell_min_width: 175
           grid_gutter: 75
           alignment: horizontal
       row:
@@ -665,7 +655,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      exposed_block: false
+      exposed_block: true
       display_extenders: {  }
       path: shop-producten
       menu:

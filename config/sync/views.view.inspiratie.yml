@@ -342,7 +342,7 @@ display:
                     filter_rewrite_values_key: false
                   collapsible: true
                   collapsible_disable_automatic_open: false
-                  open_by_default: false
+                  open_by_default: true
                   is_secondary: false
                   hide_label: false
                   field_classes: ''
@@ -365,7 +365,7 @@ display:
                     filter_rewrite_values_key: false
                   collapsible: true
                   collapsible_disable_automatic_open: false
-                  open_by_default: false
+                  open_by_default: true
                   is_secondary: false
                   hide_label: false
                   field_classes: ''
@@ -388,7 +388,7 @@ display:
                     filter_rewrite_values_key: false
                   collapsible: true
                   collapsible_disable_automatic_open: false
-                  open_by_default: false
+                  open_by_default: true
                   is_secondary: false
                   hide_label: false
                   field_classes: ''
@@ -560,7 +560,7 @@ display:
             identifier: field_type_artikel_target_id
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
             reduce: false
@@ -586,9 +586,9 @@ display:
         type: grid_responsive
         options:
           grouping: {  }
-          columns: 3
+          columns: 1
           cell_min_width: 300
-          grid_gutter: 25
+          grid_gutter: 70
           alignment: horizontal
       row:
         type: fields
@@ -1145,6 +1145,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      exposed_block: true
       display_extenders: {  }
       path: inspiratie/artikels
     cache_metadata:

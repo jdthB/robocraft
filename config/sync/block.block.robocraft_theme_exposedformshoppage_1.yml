@@ -1,0 +1,28 @@
+uuid: 287771f7-fc79-4f80-a591-e46840d1ebf6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - views.view.shop
+  module:
+    - system
+    - views
+  theme:
+    - robocraft_theme
+id: robocraft_theme_exposedformshoppage_1
+theme: robocraft_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:shop-page_1'
+settings:
+  id: 'views_exposed_filter_block:shop-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'Verfijn je keuze'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /shop-producten
