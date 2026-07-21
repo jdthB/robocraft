@@ -774,6 +774,15 @@ body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .fiel
   font-weight: 600;
 }
 
+/* Extra witruimte tussen introtekst en slider */
+body.page-inspiratie .layout--twocol-section--67-33 > .layout__region--second {
+  padding-left: 1.5rem;
+}
+
+body.page-inspiratie .layout--twocol-section--33-67 > .layout__region--first {
+  padding-right: 1.5rem;
+}
+
 
 /* Eerste introparagraaf */
 body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:first-child,
