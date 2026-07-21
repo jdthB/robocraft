@@ -869,6 +869,24 @@ body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .fiel
   }
 }
 
+/* Rulers tussen de secties op de inspiratiepagina */
+:root {
+  --inspiratie-ruler-color: #68c1bd;
+  --inspiratie-ruler-thickness: 3px;
+  --inspiratie-ruler-space-above: 2.0rem;
+  --inspiratie-ruler-space-below: 2.5rem;
+}
+
+/* 2e en 3e sectie krijgen een lijn bovenaan */
+body.page-inspiratie .node__content > .layout + .layout {
+  border-top: var(--inspiratie-ruler-thickness) dashed var(--inspiratie-ruler-color);
+  margin-top: var(--inspiratie-ruler-space-above);
+  padding-top: var(--inspiratie-ruler-space-below);
+}
+
+
+
+
 /* =================================
    14. MOBILE - HARDE OVERGANG
    Alles onder 1200px gaat meteen naar mobile/hamburger
