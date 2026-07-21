@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.inspiratie_artikel.field_robot_systeem
     - field.field.node.inspiratie_artikel.field_type_artikel
     - field.field.node.inspiratie_artikel.field_uitgelicht_op_inspiratie
+    - image.style.inspiratie_artikel
     - node.type.inspiratie_artikel
   module:
     - image
@@ -32,7 +33,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: inspiratie_artikel
       image_loading:
         attribute: lazy
     third_party_settings: {  }

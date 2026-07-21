@@ -40,143 +40,7 @@ img {
 
 
 /* =================================
-   2. PAGE LAYOUT
-================================= */
-.dialog-off-canvas-main-canvas {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-#main-wrapper {
-  flex: 1 0 auto;
-  padding-top: 6.5rem;
-  padding-bottom: 8rem;
-}
-
-/* Desktop content minder gecentreerd, breder en links uitgelijnd */
-@media (min-width: 992px) {
-  #main-wrapper .container,
-  #main-wrapper .container-xl,
-  #main-wrapper .container-xxl {
-    width: 100%;
-    max-width: 1600px;
-    margin-left: 0;
-    margin-right: auto;
-    padding-left: 10rem;
-    padding-right: 2rem;
-  }
-}
-
-/* ---------------------------------
-   2B. Desktop uitlijning voor pagina's zonder sidebar
-   Houdt no-sidebar pagina's mooi in lijn zonder te extreem te verschuiven
---------------------------------- */
-@media (min-width: 1200px) {
-  body.layout-no-sidebars #main-wrapper .container,
-  body.layout-no-sidebars #main-wrapper .container-xl,
-  body.layout-no-sidebars #main-wrapper .container-xxl {
-    padding-left: 32rem;
-  }
-}
-
-
-/* =================================
-   3. SIDEBAR / FILTERS
-================================= */
-#sidebar_first > aside.section,
-#sidebar_second > aside.section {
-  padding-top: 4.55rem;
-}
-
-#sidebar_first,
-#sidebar_second {
-  padding-right: 3.5rem;
-}
-
-#sidebar_first .block,
-#sidebar_second .block {
-  max-width: 320px;
-  padding: 1rem;
-  border: none;
-  border-top: none;
-  outline: none;
-  box-shadow: none;
-  background: transparent;
-}
-
-main.main-content,
-.region-content,
-.view-content {
-  min-width: 0;
-}
-
-/* Shop, workshops en inspiratie filters compact houden */
-#block-robocraft-theme-exposedformshoppage-1,
-#block-robocraft-theme-exposedformshoppage-1 .views-exposed-form,
-#block-robocraft-theme-exposedformshoppage-1 .bef-exposedform,
-#block-robocraft-theme-exposedformshoppage-1 .bef-exposed-form,
-#block-robocraft-theme-exposedformworkshopspage-1,
-#block-robocraft-theme-exposedformworkshopspage-1 .views-exposed-form,
-#block-robocraft-theme-exposedformworkshopspage-1 .bef-exposedform,
-#block-robocraft-theme-exposedformworkshopspage-1 .bef-exposed-form,
-#block-robocraft-theme-exposedforminspiratiepage-1,
-#block-robocraft-theme-exposedforminspiratiepage-1 .views-exposed-form,
-#block-robocraft-theme-exposedforminspiratiepage-1 .bef-exposedform,
-#block-robocraft-theme-exposedforminspiratiepage-1 .bef-exposed-form {
-  width: 100%;
-  max-width: 320px;
-}
-
-#block-robocraft-theme-exposedformshoppage-1 > h2,
-#block-robocraft-theme-exposedformworkshopspage-1 > h2,
-#block-robocraft-theme-exposedforminspiratiepage-1 > h2 {
-  font-size: 1.4rem;
-  color: #28357f;
-  margin-bottom: 0.9rem;
-}
-
-#block-robocraft-theme-exposedformshoppage-1 .views-exposed-form > .d-flex.flex-wrap,
-#block-robocraft-theme-exposedformworkshopspage-1 .views-exposed-form > .d-flex.flex-wrap,
-#block-robocraft-theme-exposedforminspiratiepage-1 .views-exposed-form > .d-flex.flex-wrap {
-  display: block !important;
-}
-
-#block-robocraft-theme-exposedformshoppage-1 details.form-item,
-#block-robocraft-theme-exposedformworkshopspage-1 details.form-item,
-#block-robocraft-theme-exposedforminspiratiepage-1 details.form-item {
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-
-/* =================================
-   4. CONTENT CARDS
-================================= */
-
-/* Alleen echte overzichtsitems / losse view-items als kaart stylen,
-   niet volledige articles of nodes */
-main.main-content .views-row {
-  background: #f5f7fb;
-  border-radius: 16px;
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 14px rgba(31, 42, 68, 0.08);
-}
-
-/* Volledige node- en articleweergaves neutraal houden */
-main.main-content article,
-main.main-content .node {
-  background: transparent;
-  border-radius: 0;
-  padding: 0;
-  margin-bottom: 0;
-  box-shadow: none;
-}
-
-/* =================================
-   5. TYPOGRAPHY
+   2. TYPOGRAPHY
 ================================= */
 h1,
 h2,
@@ -215,19 +79,87 @@ h3 {
   color: #1d2c8f;
 }
 
-#block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link {
-  font-family: "Fira Code", monospace;
+
+/* =================================
+   3. GENERAL LAYOUT
+================================= */
+.dialog-off-canvas-main-canvas {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-wrapper {
+  flex: 1 0 auto;
+  padding-top: 6.5rem;
+  padding-bottom: 8rem;
+}
+
+main.main-content,
+.region-content,
+.view-content {
+  min-width: 0;
+}
+
+
+/* Desktop content minder gecentreerd, breder en links uitgelijnd */
+@media (min-width: 992px) {
+
+  #main-wrapper .container,
+  #main-wrapper .container-xl,
+  #main-wrapper .container-xxl {
+    width: 100%;
+    max-width: 1600px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 10rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Desktop uitlijning voor pagina's zonder sidebar */
+@media (min-width: 1200px) {
+
+  body.layout-no-sidebars #main-wrapper .container,
+  body.layout-no-sidebars #main-wrapper .container-xl,
+  body.layout-no-sidebars #main-wrapper .container-xxl {
+    padding-left: 32rem;
+  }
 }
 
 
 /* =================================
-   6. BUTTONS + FORMS
+   4. CONTENT / NODES / VIEWS
+================================= */
+/* Alleen echte overzichtsitems / losse view-items als kaart stylen,
+   niet volledige articles of nodes */
+main.main-content .views-row {
+  background: #f5f7fb;
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(31, 42, 68, 0.08);
+}
+
+/* Volledige node- en articleweergaves neutraal houden */
+main.main-content article,
+main.main-content .node {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+
+/* =================================
+   5. BUTTONS + FORM FIELDS
 ================================= */
 button,
 .btn,
 input[type="submit"] {
   background-color: #68c1bd;
-  color: #26377c;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   padding: 0.7rem 1rem;
@@ -244,21 +176,82 @@ select {
 
 
 /* =================================
-   6B. EXPOSED FILTERS / BEF
+   6. SIDEBAR + EXPOSED FILTER BLOCKS
+================================= */
+#sidebar_first>aside.section,
+#sidebar_second>aside.section {
+  padding-top: 4.55rem;
+}
+
+#sidebar_first,
+#sidebar_second {
+  padding-right: 3.5rem;
+}
+
+#sidebar_first .block,
+#sidebar_second .block {
+  max-width: 320px;
+  padding: 1rem;
+  border: none;
+  border-top: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Shop, workshops en inspiratie filters compact houden */
+#block-robocraft-theme-exposedformshoppage-1,
+#block-robocraft-theme-exposedformshoppage-1 .views-exposed-form,
+#block-robocraft-theme-exposedformshoppage-1 .bef-exposedform,
+#block-robocraft-theme-exposedformshoppage-1 .bef-exposed-form,
+#block-robocraft-theme-exposedformworkshopspage-1,
+#block-robocraft-theme-exposedformworkshopspage-1 .views-exposed-form,
+#block-robocraft-theme-exposedformworkshopspage-1 .bef-exposedform,
+#block-robocraft-theme-exposedformworkshopspage-1 .bef-exposed-form,
+#block-robocraft-theme-exposedforminspiratiepage-1,
+#block-robocraft-theme-exposedforminspiratiepage-1 .views-exposed-form,
+#block-robocraft-theme-exposedforminspiratiepage-1 .bef-exposedform,
+#block-robocraft-theme-exposedforminspiratiepage-1 .bef-exposed-form {
+  width: 100%;
+  max-width: 320px;
+}
+
+#block-robocraft-theme-exposedformshoppage-1>h2,
+#block-robocraft-theme-exposedformworkshopspage-1>h2,
+#block-robocraft-theme-exposedforminspiratiepage-1>h2 {
+  font-size: 1.4rem;
+  color: #28357f;
+  margin-bottom: 0.9rem;
+}
+
+#block-robocraft-theme-exposedformshoppage-1 .views-exposed-form>.d-flex.flex-wrap,
+#block-robocraft-theme-exposedformworkshopspage-1 .views-exposed-form>.d-flex.flex-wrap,
+#block-robocraft-theme-exposedforminspiratiepage-1 .views-exposed-form>.d-flex.flex-wrap {
+  display: block !important;
+}
+
+#block-robocraft-theme-exposedformshoppage-1 details.form-item,
+#block-robocraft-theme-exposedformworkshopspage-1 details.form-item,
+#block-robocraft-theme-exposedforminspiratiepage-1 details.form-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+
+/* =================================
+   7. EXPOSED FILTERS / BEF
 ================================= */
 
 /* ---------------------------------
-   6B.1 Algemene filtertekst
---------------------------------- */
+   7.1 FILTERING
+   --------------------------------- */
 .views-exposed-form,
 .bef-exposed-form {
   color: #26377c;
   font-size: 1.1rem;
 }
 
-/* ---------------------------------
-   6B.2 Buitenrand van elk filterblokje
---------------------------------- */
 .views-exposed-form details,
 .bef-exposed-form details {
   border: 1px solid #68c1bd;
@@ -268,9 +261,6 @@ select {
   overflow: hidden;
 }
 
-/* ---------------------------------
-   6B.3 Titelbalk van elk filterblokje
---------------------------------- */
 .views-exposed-form details summary,
 .bef-exposed-form details summary {
   font-family: "Fira Code", monospace;
@@ -286,9 +276,6 @@ select {
   position: relative;
 }
 
-/* ---------------------------------
-   6B.4 Native browser-pijltje verbergen
---------------------------------- */
 .views-exposed-form details summary::marker,
 .bef-exposed-form details summary::marker {
   content: "";
@@ -299,9 +286,6 @@ select {
   display: none;
 }
 
-/* ---------------------------------
-   6B.5 Eigen inklap-pijltje
---------------------------------- */
 .views-exposed-form details summary::after,
 .bef-exposed-form details summary::after {
   content: "";
@@ -321,25 +305,16 @@ select {
   transform: translateY(-55%) rotate(45deg);
 }
 
-/* ---------------------------------
-   6B.6 Titelbalk wanneer blokje open staat
---------------------------------- */
 .views-exposed-form details[open] summary,
 .bef-exposed-form details[open] summary {
   background: #eef9f8;
 }
 
-/* ---------------------------------
-   6B.7 Binnenruimte van opengeklapt filterblokje
---------------------------------- */
 .views-exposed-form .details-wrapper,
 .bef-exposed-form .details-wrapper {
   padding: 0.85rem 1rem 1rem;
 }
 
-/* ---------------------------------
-   6B.8 Afstand tussen checkbox-items / filteropties
---------------------------------- */
 .views-exposed-form .form-check,
 .bef-exposed-form .form-check,
 .views-exposed-form .js-form-item,
@@ -347,9 +322,6 @@ select {
   margin-bottom: 0.55rem !important;
 }
 
-/* ---------------------------------
-   6B.9 Labels van filteropties
---------------------------------- */
 .views-exposed-form .form-check-label,
 .bef-exposed-form .form-check-label,
 .views-exposed-form label,
@@ -358,18 +330,12 @@ select {
   font-size: 1rem;
 }
 
-/* ---------------------------------
-   6B.10 Checkbox-opmaak
---------------------------------- */
 .views-exposed-form input[type="checkbox"],
 .bef-exposed-form input[type="checkbox"] {
   transform: scale(1.05);
   margin-right: 0.4rem;
 }
 
-/* ---------------------------------
-   6B.11 Tekstvelden, zoekvelden en dropdowns
---------------------------------- */
 .views-exposed-form input[type="text"],
 .bef-exposed-form input[type="text"],
 .views-exposed-form input[type="search"],
@@ -384,9 +350,6 @@ select {
   background: #ffffff;
 }
 
-/* ---------------------------------
-   6B.12 Actieknoppen onderaan filters
---------------------------------- */
 .views-exposed-form .form-actions,
 .bef-exposed-form .form-actions {
   margin-top: 1rem;
@@ -397,17 +360,84 @@ select {
   width: 100%;
 }
 
-/* ---------------------------------
-   6B.13 Dubbele legend/fieldset titel verbergen
---------------------------------- */
 .views-exposed-form fieldset legend,
 .bef-exposed-form fieldset legend {
   display: none;
 }
 
+/* ---------------------------------
+   7.2 Shop: SORTEREN
+--------------------------------- */
+
+body.path-shop [data-drupal-selector="edit-bef-sort-options"] {
+  position: relative;
+  margin-top: 4.25rem;
+  overflow: visible;
+}
+
+/* Losse titel boven het sorteerkader */
+body.path-shop [data-drupal-selector="edit-bef-sort-options"]::before {
+  content: "Sorteer producten";
+  position: absolute;
+  left: 0;
+  top: -3.25rem;
+  display: block;
+  font-family: "Fira Code", monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #28357f;
+  pointer-events: none;
+}
+
+/* Ruler tussen titel en sorteerblok */
+body.path-shop [data-drupal-selector="edit-bef-sort-options"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1.1rem;
+  width: 100%;
+  height: 1px;
+  background: #68c1bd;
+  pointer-events: none;
+}
+
+body.path-shop [data-drupal-selector="edit-bef-sort-options"]>summary {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Zorg dat dropdowns visueel als dropdown herkenbaar zijn */
+body.path-shop .js-form-item-sort-by,
+body.path-shop .js-form-item-sort-order {
+  position: relative;
+}
+
+body.path-shop .js-form-item-sort-by::after,
+body.path-shop .js-form-item-sort-order::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 2.65rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid #26377c;
+  border-bottom: 2px solid #26377c;
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+}
+
+body.path-shop .js-form-item-sort-by select,
+body.path-shop .js-form-item-sort-order select {
+  padding-right: 2.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+}
+
 
 /* =================================
-   7. HEADER REGIONS
+   8. HEADER TOP / SECONDARY REGION
 ================================= */
 #header {
   background: #ffffff;
@@ -420,34 +450,125 @@ select {
 }
 
 #navbar-top {
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  background: #ffffff;
+  padding: 0.75rem 2rem 0.35rem 2rem;
+}
+
+#navbar-top .region-secondary-menu {
+  position: relative;
+  top: 3.2rem;
+}
+
+#navbar-top .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+#region-secondary-menu,
+.region-secondary-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#navbar-top .region-secondary-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: nowrap;
 }
 
 
 /* =================================
-   8. CART BLOCK
+   9. SEARCH BLOCK
 ================================= */
+#block-robocraft-theme-search-form-narrow {
+  margin-left: 2rem;
+}
+
+#block-robocraft-theme-search-form-narrow form,
+#block-robocraft-theme-search-form-narrow .search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+#block-robocraft-theme-search-form-narrow .form-search,
+#block-robocraft-theme-search-form-narrow input[type="search"] {
+  display: block;
+  width: 220px;
+  min-width: 220px;
+  height: 38px;
+  background: #ffffff;
+  border: 2px solid #58d3c7;
+  border-radius: 0;
+  margin: 0;
+}
+
+#block-robocraft-theme-search-form-narrow input[type="search"] {
+  border: 2px solid #58d3c7;
+  border-radius: 0;
+}
+
+#block-robocraft-theme-search-form-narrow .form-actions,
+#block-robocraft-theme-search-form-narrow input[type="submit"] {
+  margin: 0;
+  height: 38px;
+  flex: 0 0 auto;
+}
+
+#block-robocraft-theme-search-form-narrow input[type="submit"] {
+  background: #58d3c7;
+  color: #1f2a44;
+  border-radius: 6px;
+}
+
+
+/* =================================
+   10. CART BLOCK
+================================= */
+#block-robocraft-theme-winkelwagen,
+#block-robocraft-theme-search-form-narrow {
+  margin: 0;
+  flex: 0 0 auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+#block-robocraft-theme-winkelwagen {
+  justify-content: flex-end;
+}
+
 #block-robocraft-theme-winkelwagen h2 {
   display: none;
 }
 
 #block-robocraft-theme-winkelwagen .cart-block--summary__icon img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(33%) saturate(1770%) hue-rotate(210deg) brightness(89%) contrast(96%);
 }
 
 #block-robocraft-theme-winkelwagen .cart-block--link__expand {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
   color: #28357f;
   font-weight: 700;
+  margin: 0;
+  line-height: 1;
 }
 
 
 /* =================================
-   9. MAIN NAVBAR
+   11. MAIN NAVBAR
 ================================= */
 #navbar-main {
   background-color: #28357f;
@@ -498,6 +619,7 @@ select {
 }
 
 #block-robocraft-theme-main-menu ul.nav.navbar-nav .nav-link {
+  font-family: "Fira Code", monospace;
   color: #ffffff;
   font-weight: 500;
   font-size: 1.4rem;
@@ -524,119 +646,6 @@ select {
 .nav-link:focus,
 #navbar-main .navbar-toggler:focus {
   box-shadow: none;
-}
-
-
-/* =================================
-   10. SEARCH BLOCK
-================================= */
-#block-robocraft-theme-search-form-narrow {
-  margin-left: 2rem;
-}
-
-#block-robocraft-theme-search-form-narrow input[type="search"] {
-  border: 2px solid #58d3c7;
-  border-radius: 0;
-}
-
-#block-robocraft-theme-search-form-narrow input[type="submit"] {
-  background: #58d3c7;
-  color: #1f2a44;
-  border-radius: 6px;
-}
-
-#block-robocraft-theme-search-form-narrow form,
-#block-robocraft-theme-search-form-narrow .search-form {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0;
-}
-
-#block-robocraft-theme-search-form-narrow .form-search,
-#block-robocraft-theme-search-form-narrow input[type="search"] {
-  display: block;
-  width: 220px;
-  min-width: 220px;
-  height: 38px;
-  background: #ffffff;
-  border: 2px solid #58d3c7;
-  border-radius: 0;
-  margin: 0;
-}
-
-#block-robocraft-theme-search-form-narrow .form-actions,
-#block-robocraft-theme-search-form-narrow input[type="submit"] {
-  margin: 0;
-  height: 38px;
-  flex: 0 0 auto;
-}
-
-
-/* =================================
-   11. SECONDARY MENU DESKTOP
-================================= */
-#navbar-top {
-  background: #ffffff;
-  padding: 0.75rem 2rem 0.35rem 2rem;
-}
-
-#navbar-top .region-secondary-menu {
-  position: relative;
-  top: 3.2rem;
-}
-
-#navbar-top .container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  max-width: 100%;
-}
-
-#region-secondary-menu,
-.region-secondary-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: 100%;
-}
-
-#navbar-top .region-secondary-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 1rem;
-  flex-wrap: nowrap;
-}
-
-#block-robocraft-theme-search-form-narrow,
-#block-robocraft-theme-winkelwagen {
-  margin: 0;
-  flex: 0 0 auto;
-  width: auto;
-  display: flex;
-  align-items: center;
-}
-
-#block-robocraft-theme-winkelwagen {
-  justify-content: flex-end;
-}
-
-#block-robocraft-theme-winkelwagen .cart-block--summary__icon img {
-  width: 30px;
-  height: auto;
-  filter: brightness(0) saturate(100%) invert(20%) sepia(33%) saturate(1770%) hue-rotate(210deg) brightness(89%) contrast(96%);
-}
-
-#block-robocraft-theme-winkelwagen .cart-block--link__expand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  white-space: nowrap;
-  color: #28357f;
-  font-weight: 700;
-  margin: 0;
-  line-height: 1;
 }
 
 
@@ -703,9 +712,14 @@ select {
 
 
 /* =================================
-   13. INSPIRATIEPAGINA
+   13. INSPIRATIE DYNAMIC PAGINA
 ================================= */
-
+:root {
+  --inspiratie-ruler-color: #68c1bd;
+  --inspiratie-ruler-thickness: 3px;
+  --inspiratie-ruler-space-above: 2rem;
+  --inspiratie-ruler-space-below: 2.5rem;
+}
 
 /* Grote kaart rond volledige pagina weg */
 body.page-inspiratie main.main-content article.node--type-page,
@@ -717,18 +731,16 @@ body.page-inspiratie main.main-content .node.node--type-page {
   margin-bottom: 0;
 }
 
-
 /* Wat lucht tussen layout builder secties */
-body.page-inspiratie .node__content > .layout {
+body.page-inspiratie .node__content>.layout {
   margin-bottom: 4rem;
 }
 
-body.page-inspiratie .node__content > .layout:last-child {
+body.page-inspiratie .node__content>.layout:last-child {
   margin-bottom: 0;
 }
 
-
-/* Layout builder kolommen gewoon netjes bovenaan uitlijnen */
+/* Layout builder kolommen bovenaan uitlijnen */
 body.page-inspiratie .layout--twocol-section--67-33,
 body.page-inspiratie .layout--twocol-section--33-67,
 body.page-inspiratie .layout--twocol-section--75-25,
@@ -736,24 +748,28 @@ body.page-inspiratie .layout--twocol-section--25-75 {
   align-items: flex-start;
 }
 
+/* Rulers tussen secties */
+body.page-inspiratie .node__content>.layout+.layout {
+  border-top: var(--inspiratie-ruler-thickness) dashed var(--inspiratie-ruler-color);
+  margin-top: var(--inspiratie-ruler-space-above);
+  padding-top: var(--inspiratie-ruler-space-below);
+}
 
-/* Afbeeldingen wat netter */
+/* Afbeeldingen */
 body.page-inspiratie .vvjs-item-inner img,
 body.page-inspiratie .views-view-responsive-grid__item-inner img {
   border-radius: 16px;
+  margin-bottom: 1rem;
 }
 
-
-/* Slider-titel minder hard laten afbreken */
+/* Slidertitels */
 body.page-inspiratie .view-inspiratie-hero h3,
 body.page-inspiratie .view-inspiratie-hero .views-field-title h3 {
   font-size: 2rem;
   line-height: 1.2;
-  max-width: 35ch;
+  max-width: 38ch;
 }
 
-
-/* Slider-titels apart */
 body.page-inspiratie .view-inspiratie-hero h3.field-content,
 body.page-inspiratie .view-inspiratie-hero h3.field-content a {
   color: #e86e0a;
@@ -762,10 +778,7 @@ body.page-inspiratie .view-inspiratie-hero h3.field-content a {
   line-height: 1.3;
 }
 
-
-/* Introblok naast de slider
-   Werkt zowel als de intro rechts staat (67-33)
-   als wanneer die links staat (33-67) */
+/* Introblok naast de slider */
 body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body,
 body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body {
   font-size: 1.3rem;
@@ -775,32 +788,28 @@ body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .fiel
 }
 
 /* Extra witruimte tussen introtekst en slider */
-body.page-inspiratie .layout--twocol-section--67-33 > .layout__region--second {
+body.page-inspiratie .layout--twocol-section--67-33>.layout__region--second {
   padding-left: 1.5rem;
 }
 
-body.page-inspiratie .layout--twocol-section--33-67 > .layout__region--first {
+body.page-inspiratie .layout--twocol-section--33-67>.layout__region--first {
   padding-right: 1.5rem;
 }
 
-
 /* Eerste introparagraaf */
-body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:first-child,
-body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body > p:first-child {
+body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body>p:first-child,
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body>p:first-child {
   margin-top: 0;
   margin-bottom: 1.25rem;
 }
 
-
 /* Lege paragraaf met &nbsp; niet tonen */
-body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body > p:empty,
-body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body > p:empty {
+body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body>p:empty,
+body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body>p:empty {
   display: none;
 }
 
-
-/* CTA-links als buttons
-   Werkt voor intro naast slider + tekstblokjes naast leerkrachten/ouders */
+/* CTA-links als buttons */
 body.page-inspiratie .layout--twocol-section--67-33 .layout__region--second .field--name-body a,
 body.page-inspiratie .layout--twocol-section--33-67 .layout__region--first .field--name-body a,
 body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body a,
@@ -826,9 +835,9 @@ body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .fiel
   text-decoration: none;
 }
 
-/* Titels "Voor leerkrachten" en "Voor ouders" */
-body.page-inspiratie .block-views-blockinspiratie-block-1 > h2,
-body.page-inspiratie .block-views-blockinspiratie-block-2 > h2 {
+/* Titels artikelsecties */
+body.page-inspiratie .block-views-blockinspiratie-block-1>h2,
+body.page-inspiratie .block-views-blockinspiratie-block-2>h2 {
   color: #28357f;
   font-size: 1.9rem;
   font-weight: 700;
@@ -836,7 +845,7 @@ body.page-inspiratie .block-views-blockinspiratie-block-2 > h2 {
   margin-bottom: 1.25rem;
 }
 
-/* Artikeltitels onder leerkrachten / ouders apart */
+/* Artikeltitels onder leerkrachten / ouders */
 body.page-inspiratie .views-view-responsive-grid__item-inner h3.field-content,
 body.page-inspiratie .views-view-responsive-grid__item-inner h3.field-content a {
   color: #e86e0a;
@@ -845,9 +854,7 @@ body.page-inspiratie .views-view-responsive-grid__item-inner h3.field-content a 
   line-height: 1.35;
 }
 
-
-/* Tekstblok naast artikelsecties
-   Werkt voor beide richtingen: 75-25 en 25-75 */
+/* Tekstblok naast artikelsecties */
 body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body,
 body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .field--name-body {
   margin-top: 4.9rem;
@@ -858,49 +865,189 @@ body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .fiel
   font-weight: 600;
 }
 
+/* =================================
+   13.1 INSPIRATIEOVERZICHT
+================================= */
 
-/* Mobiel */
-@media (max-width: 1199.98px) {
-  body.page-inspiratie .node__content > .layout {
-    margin-bottom: 2rem;
-  }
-
-  body.page-inspiratie .view-inspiratie-hero h3,
-  body.page-inspiratie .view-inspiratie-hero .views-field-title h3 {
-    font-size: 1.55rem;
-    max-width: none;
-  }
-
-  body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body,
-  body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .field--name-body {
-    margin-top: 0;
-    margin-left: 0;
-  }
-}
-
-/* Rulers tussen de secties op de inspiratiepagina */
 :root {
-  --inspiratie-ruler-color: #68c1bd;
-  --inspiratie-ruler-thickness: 3px;
-  --inspiratie-ruler-space-above: 2.0rem;
-  --inspiratie-ruler-space-below: 2.5rem;
+  --inspiratie-overzicht-ruler-color: #68c1bd;
+  --inspiratie-overzicht-ruler-thickness: 2px;
+  --inspiratie-overzicht-ruler-style: dashed;
+  --inspiratie-overzicht-item-space-y: 2rem;
+  --inspiratie-overzicht-gap: 2rem;
+  --inspiratie-overzicht-image-radius: 16px;
+  --inspiratie-overzicht-image-width: 360px;
 }
 
-/* 2e en 3e sectie krijgen een lijn bovenaan */
-body.page-inspiratie .node__content > .layout + .layout {
-  border-top: var(--inspiratie-ruler-thickness) dashed var(--inspiratie-ruler-color);
-  margin-top: var(--inspiratie-ruler-space-above);
-  padding-top: var(--inspiratie-ruler-space-below);
+/* Responsive grid wrapper neutraler maken */
+body.page-view-inspiratie .view-id-inspiratie .views-view-responsive-grid {
+  display: block;
 }
 
+/* Elk item over de volle breedte */
+body.page-view-inspiratie .view-id-inspiratie .views-view-responsive-grid__item {
+  width: 100%;
+}
 
+/* Artikel-layout: afbeelding links, content rechts */
+body.page-view-inspiratie .view-id-inspiratie .views-view-responsive-grid__item-inner {
+  display: grid;
+  grid-template-columns: var(--inspiratie-overzicht-image-width) minmax(0, 1fr);
+  grid-template-areas:
+    "image title"
+    "image intro"
+    "image link";
+  column-gap: var(--inspiratie-overzicht-gap);
+  row-gap: 0.75rem;
+  align-items: start;
+  padding-bottom: var(--inspiratie-overzicht-item-space-y);
+  margin-bottom: var(--inspiratie-overzicht-item-space-y);
+  border-bottom: var(--inspiratie-overzicht-ruler-thickness) var(--inspiratie-overzicht-ruler-style) var(--inspiratie-overzicht-ruler-color);
+}
 
+/* Laatste artikel zonder ruler */
+body.page-view-inspiratie .view-id-inspiratie .views-view-responsive-grid__item:last-child .views-view-responsive-grid__item-inner {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Plaatsing per veld */
+body.page-view-inspiratie .view-id-inspiratie .views-field-field-inspiratie-afbeelding {
+  grid-area: image;
+}
+
+body.page-view-inspiratie .view-id-inspiratie .views-field-title {
+  grid-area: title;
+}
+
+body.page-view-inspiratie .view-id-inspiratie .views-field-field-korte-intro {
+  grid-area: intro;
+}
+
+body.page-view-inspiratie .view-id-inspiratie .views-field-view-node {
+  grid-area: link;
+}
+
+/* Afbeelding */
+body.page-view-inspiratie .view-id-inspiratie .views-field-field-inspiratie-afbeelding img {
+  width: 100%;
+  max-width: var(--inspiratie-overzicht-image-width);
+  border-radius: var(--inspiratie-overzicht-image-radius);
+  display: block;
+  object-fit: cover;
+}
+
+/* Titel */
+body.page-view-inspiratie .view-id-inspiratie .views-field-title h3 {
+  margin-bottom: 0;
+  font-size: 1.65rem;
+  line-height: 1.25;
+}
+
+body.page-view-inspiratie .view-id-inspiratie .views-field-title h3 a {
+  color: #e86e0a;
+  text-decoration: none;
+}
+
+body.page-view-inspiratie .view-id-inspiratie .views-field-title h3 a:hover {
+  color: #26377c;
+  text-decoration: underline;
+}
+
+/* Intro */
+body.page-view-inspiratie .view-id-inspiratie .views-field-field-korte-intro .field-content {
+  color: #26377c;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+/* Lees meer */
+body.page-view-inspiratie .view-id-inspiratie .views-field-view-node a {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background-color: #26377c;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+body.page-view-inspiratie .view-id-inspiratie .views-field-view-node a:hover {
+  background-color: #68c1bd;
+  color: #26377c;
+  text-decoration: none;
+}
 
 /* =================================
-   14. MOBILE - HARDE OVERGANG
-   Alles onder 1200px gaat meteen naar mobile/hamburger
+   13.2 INSPIRATIE ARTIKEL DETAIL
+================================= */
+
+:root {
+  --inspiratie-detail-gap: 2rem;
+  --inspiratie-detail-image-width: 660px;
+  --inspiratie-detail-image-radius: 16px;
+  --inspiratie-detail-image-border-thickness: 8px;
+  --inspiratie-detail-image-border-style: dashed;
+  --inspiratie-detail-image-border-color: #68c1bd;
+  --inspiratie-detail-intro-font-size: 1.2rem;
+  --inspiratie-detail-intro-line-height: 1.8;
+  --inspiratie-detail-intro-color: #26377c;
+  --inspiratie-detail-intro-font-family: "Roboto Flex", Arial, sans-serif;
+}
+
+/* Detailpagina van inspiratie-artikel */
+.node--type-inspiratie-artikel.node--view-mode-full .node__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, var(--inspiratie-detail-image-width));
+  grid-template-areas:
+    "intro image"
+    "content content";
+  column-gap: var(--inspiratie-detail-gap);
+  row-gap: 2rem;
+  align-items: end;
+}
+
+/* Afbeelding rechts */
+.node--type-inspiratie-artikel.node--view-mode-full .field--name-field-inspiratie-afbeelding {
+  grid-area: image;
+}
+
+.node--type-inspiratie-artikel.node--view-mode-full .field--name-field-inspiratie-afbeelding img {
+  display: block;
+  width: 100%;
+  max-width: var(--inspiratie-detail-image-width);
+  border: var(--inspiratie-detail-image-border-thickness) var(--inspiratie-detail-image-border-style) var(--inspiratie-detail-image-border-color);
+  border-radius: var(--inspiratie-detail-image-radius);
+}
+
+/* Korte intro links */
+.node--type-inspiratie-artikel.node--view-mode-full .field--name-field-korte-intro {
+  grid-area: intro;
+  font-family: var(--inspiratie-detail-intro-font-family);
+  font-size: var(--inspiratie-detail-intro-font-size);
+  line-height: var(--inspiratie-detail-intro-line-height);
+  color: var(--inspiratie-detail-intro-color);
+  font-weight: 500;
+}
+
+/* Hoofdinhoud onder beide */
+.node--type-inspiratie-artikel.node--view-mode-full .field--name-field-inhoud {
+  grid-area: content;
+}
+
+/* Leesbreedte behouden */
+.node--type-inspiratie-artikel.node--view-mode-full .field--name-field-inhoud > * {
+  max-width: 75ch;
+}
+
+/* =================================
+   14. MOBILE / RESPONSIVE
 ================================= */
 @media (max-width: 1199.98px) {
+
   #main-wrapper .container,
   #main-wrapper .container-xl,
   #main-wrapper .container-xxl {
@@ -925,8 +1072,8 @@ body.page-inspiratie .node__content > .layout + .layout {
     margin-bottom: 2rem;
   }
 
-  #sidebar_first > aside.section,
-  #sidebar_second > aside.section {
+  #sidebar_first>aside.section,
+  #sidebar_second>aside.section {
     padding-top: 0;
   }
 
@@ -1102,40 +1249,74 @@ body.page-inspiratie .node__content > .layout + .layout {
     padding: 1rem;
   }
 
-  /* ---------------------------------
-     14.1 Inspiratiepagina op mobiel
-     Alles onder elkaar, luchtiger en leesbaar
-  --------------------------------- */
-  body.page-node-5 .layout--twocol-section--67-33,
-  body.page-node-5 .layout--twocol-section--75-25,
-  body.page-node-5 .layout--twocol-section--25-75 {
-    gap: 1.5rem;
+  /* Inspiratiepagina op mobiel */
+  body.page-inspiratie .node__content>.layout {
+    margin-bottom: 2rem;
   }
 
-  body.page-node-5 .view-inspiratie-hero h3,
-  body.page-node-5 .view-inspiratie-hero .views-field-title h3 {
+  body.page-inspiratie .view-inspiratie-hero h3,
+  body.page-inspiratie .view-inspiratie-hero .views-field-title h3 {
     font-size: 1.55rem;
     max-width: none;
   }
 
-  body.page-node-5 .block-views-blockinspiratie-block-1 > h2,
-  body.page-node-5 .block-views-blockinspiratie-block-2 > h2 {
+  body.page-inspiratie .layout--twocol-section--67-33,
+  body.page-inspiratie .layout--twocol-section--75-25,
+  body.page-inspiratie .layout--twocol-section--25-75 {
+    gap: 1.5rem;
+  }
+
+  body.page-inspiratie .layout--twocol-section--75-25 .layout__region--second .field--name-body,
+  body.page-inspiratie .layout--twocol-section--25-75 .layout__region--first .field--name-body {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  body.page-inspiratie .block-views-blockinspiratie-block-1>h2,
+  body.page-inspiratie .block-views-blockinspiratie-block-2>h2 {
     font-size: 1.8rem;
   }
 
-  body.page-node-5 .views-view-responsive-grid {
+  body.page-inspiratie .views-view-responsive-grid {
     --views-responsive-grid--column-count: 1 !important;
     --views-responsive-grid--cell-min-width: 100% !important;
     --views-responsive-grid--layout-gap: 1.25rem !important;
   }
 
-  body.page-node-5 .views-view-responsive-grid__item-inner h3 {
+  body.page-inspiratie .views-view-responsive-grid__item-inner h3 {
     font-size: 1.15rem;
   }
 
-  body.page-node-5 .layout--twocol-section--67-33 .field--name-body,
-  body.page-node-5 .layout--twocol-section--75-25 .field--name-body,
-  body.page-node-5 .layout--twocol-section--25-75 .field--name-body {
+  body.page-inspiratie .layout--twocol-section--67-33 .field--name-body,
+  body.page-inspiratie .layout--twocol-section--75-25 .field--name-body,
+  body.page-inspiratie .layout--twocol-section--25-75 .field--name-body {
     max-width: none;
   }
+
+  /* Inspiratieoverzicht op mobiel */
+  body.page-view-inspiratie .view-id-inspiratie .views-view-responsive-grid__item-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "title"
+      "intro"
+      "link";
+  }
+
+  body.page-view-inspiratie .view-id-inspiratie .views-field-field-inspiratie-afbeelding img {
+    max-width: 100%;
+  }
+
+  body .node--type-inspiratie-artikel.node--view-mode-full .node__content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "intro"
+      "content";
+  }
+
+  body .node--type-inspiratie-artikel.node--view-mode-full .field--name-field-inspiratie-afbeelding img {
+    max-width: 100%;
+  }
+
 }

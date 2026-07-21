@@ -274,6 +274,17 @@ display:
               secondary_label: 'Uitgebreide opties'
               secondary_open: false
               reset_button_always_show: false
+            sort:
+              plugin_id: default
+              advanced:
+                combine: false
+                combine_rewrite: ''
+                combine_param: sort_bef_combine
+                reset: false
+                reset_label: ''
+                collapsible: true
+                collapsible_label: Opties
+                is_secondary: false
             filter:
               field_robotsysteem_target_id:
                 plugin_id: bef
@@ -373,9 +384,9 @@ display:
           plugin_id: standard
           order: ASC
           expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
+            label: Prijs
+            field_identifier: price__number
+          exposed: true
       arguments: {  }
       filters:
         status:
@@ -651,6 +662,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags:
         - 'config:field.storage.commerce_product.field_productafbeelding'
   page_1:
@@ -678,5 +691,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags:
         - 'config:field.storage.commerce_product.field_productafbeelding'

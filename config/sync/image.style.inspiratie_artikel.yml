@@ -1,0 +1,15 @@
+uuid: d04ba63a-e89c-4a18-99ac-aff90d1d0d75
+langcode: nl
+status: true
+dependencies: {  }
+name: inspiratie_artikel
+label: 'Inspiratie Artikel '
+effects:
+  e9b5defe-9852-4f90-937e-c8795fbab40f:
+    uuid: e9b5defe-9852-4f90-937e-c8795fbab40f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 660
+      height: 450
+      anchor: center-center
